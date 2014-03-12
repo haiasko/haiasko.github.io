@@ -1,10 +1,13 @@
-<!doctype html>
-<html>
-  <head>
-    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
-  </head>
-  <body>
-	<h2>Fay tests</h2>
-	<a href="Alert.html">Alert</a>
-  </body>
-</html>
+---
+layout: default
+title: Under construction
+---
+
+<div id="home">
+  <h1>Drafts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
