@@ -7,17 +7,18 @@ Using [this cheatsheet for markdown](https://github.com/adam-p/markdown-here/wik
 
 # Goldfurt
 
-Building type|qty
----|---:
-Fishermen|6
-Bakery|24
-Mill|23
-Wheat farm|46
-Goat farm|33
-Spinner hut|18
-Sheep farm|19
-Furrier workshop|3
-Trapper's lodge|3
+Building type|qty|?
+---|---:|---:
+Fishermen|6|-
+Bakery|24|-
+Mill|23|-
+Wheat farm|46|-
+Goat farm|33|V
+Spinner hut|18|-
+Sheep farm|19|-
+Furrier workshop|3|-
+Trapper's lodge|3|-
+
 
 # Rotlarchen
 
