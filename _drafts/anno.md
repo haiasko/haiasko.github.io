@@ -1,7 +1,6 @@
 ---
 title: Anno notes
 layout: post
-categories: anno games
 ---
 
 # Islands to replace
