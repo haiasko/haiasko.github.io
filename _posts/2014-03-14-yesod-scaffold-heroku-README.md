@@ -1,6 +1,8 @@
 ---
 title: yesod scaffold on heroku
 layout: post
+category: code
+tags: [haskell, yesod, heroku]
 ---
 
 This is a yesod scaffold successfully deployed on Heroku - initial compilation took like 13 minutes, subsequent deployments - 4.
