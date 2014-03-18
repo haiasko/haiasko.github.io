@@ -1,6 +1,8 @@
 ---
 title: Anno notes
 layout: post
+category: scratch
+tags: [games, anno]
 ---
 
 # Islands to replace

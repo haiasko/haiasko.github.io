@@ -1,6 +1,8 @@
 ---
 layout: post
 title: TSO stuff
+category: scratch
+tags: [games, tso]
 ---
 
 ## TSO test server checklist (roughly in that order) at account wipe:
