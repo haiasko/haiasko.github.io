@@ -25,4 +25,4 @@ XXXX-XXXX_XXX
 
 - unlocking boot loader - http://unlockbootloader.sonymobile.com/instructions - got a code, didn't use it, unlocked with flashtool
 
-- found this by Google - http://www.uloz.to/xWW7P1M/mt11i-4-1-b-0-587-1255-1755-r1i-global-ftf - flashing now - success - ICS 4.0
+- found this by Google - http://www.uloz.to/xWW7P1M/mt11i-4-1-b-0-587-1255-1755-r1i-global-ftf - flashing now - success - ICS 4.0, installed Chrome, working
