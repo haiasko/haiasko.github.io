@@ -30,3 +30,7 @@ XXXX-XXXX_XXX
 - getting the latest KitKat build from http://legacyxperia.basketbuild.com/index.php?dir=main/haida/cm-11.0/nightlies/ - installed the kernel, got into CM boot recovery, installed the latest release and gapps, restarted - success - got Android 4.4.2 KitKat
 
 - and now i find this: http://xperiafirmware.com/8-firmware/16-sony-ericsson-xperia-neo-v-mt11 (not tested)
+
+### Ending here :)
+
+http://forum.xda-developers.com/showpost.php?p=47895928&postcount=1
