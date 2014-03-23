@@ -2,7 +2,7 @@
 layout: post
 title: "Sony Ericsson Neo V upgrade"
 description: ""
-category: mobile
+category: scratch
 tags: [mobile, neoV]
 ---
 {% include JB/setup %}
@@ -21,3 +21,8 @@ Starting from [here](https://github.com/LegacyXperia/Wiki/wiki/Installing-Legacy
 Customization Version:
 XXXX-XXXX_XXX
 
+- downloading http://www.mediafire.com/download/pp6iei56xbjwb4r/MT11a_4.1.B.0.587_Generic+Trade+US%2C+CDF-1254-9468.ftf.7z mentioned [here](http://forum.xda-developers.com/showpost.php?p=38371938&postcount=82)
+
+- unlocking boot loader - http://unlockbootloader.sonymobile.com/instructions - got a code, didn't use it, unlocked with flashtool
+
+- found this by Google - http://www.uloz.to/xWW7P1M/mt11i-4-1-b-0-587-1255-1755-r1i-global-ftf - flashing now - success - ICS 4.0
