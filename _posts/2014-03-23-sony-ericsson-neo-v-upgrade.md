@@ -27,4 +27,4 @@ XXXX-XXXX_XXX
 
 - found this by Google - http://www.uloz.to/xWW7P1M/mt11i-4-1-b-0-587-1255-1755-r1i-global-ftf - flashing now - success - ICS 4.0, installed Chrome, working
 
-- getting the latest KitKat build from http://legacyxperia.basketbuild.com/index.php?dir=main/haida/cm-11.0/nightlies/ - installed the kernel, got into CM boot recovery, installed the latest release and gapps, restarted - success - got Android 4.4.0 KitKat
+- getting the latest KitKat build from http://legacyxperia.basketbuild.com/index.php?dir=main/haida/cm-11.0/nightlies/ - installed the kernel, got into CM boot recovery, installed the latest release and gapps, restarted - success - got Android 4.4.2 KitKat
