@@ -1,6 +1,6 @@
 ---
 title: Anno notes
-layout: post
+layout: page
 category: scratch
 tags: [games, anno]
 ---

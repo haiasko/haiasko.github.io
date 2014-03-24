@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: "Evil_J guides mirror"
 description: ""
 category: scratch

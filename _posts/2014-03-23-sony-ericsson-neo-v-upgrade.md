@@ -2,8 +2,8 @@
 layout: post
 title: "Sony Ericsson Neo V upgrade"
 description: ""
-category: scratch
-tags: [mobile, neoV]
+category: code
+tags: [mobile, neoV, android, kitkat, xperia, mt11i, sony]
 ---
 {% include JB/setup %}
 
