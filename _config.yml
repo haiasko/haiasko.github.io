@@ -11,10 +11,10 @@ pygments: true
 title : Haiasko's Notes
 tagline: learning to Jekyll
 author :
-  name : Haiasko
+  name : <a href="https://twitter.com/mutresko">Haiasko</a>
   email : blah@email.test
   github : haiasko
-  twitter : username
+  twitter : mutresko
   feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
