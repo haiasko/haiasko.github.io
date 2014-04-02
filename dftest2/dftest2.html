@@ -3,7 +3,7 @@
 <head>
     <title>Me tinkering</title>
 
-    <!-- Bootstrap's tinkering -->
+    <!-- Bootstrap's tinkering (without the Bootstrap) -->
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,9 +58,26 @@
 	.myred {
 	color:red;
 	}
+	.mydrag {
+	color:purple;
+	}
     </style
 
     <!-- end my stuff -->
+
+    <!-- Here be dragons styles -->
+
+    <!-- Stolen from http://jsfiddle.net/KJQ9K/ -->
+
+    <style>
+      pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+      .string { color: green; }
+      .number { color: darkorange; }
+      .boolean { color: blue; }
+      .null { color: magenta; }
+      .key { color: red; }
+    </style>
+    <!-- end Here be dragons styles -->
 
 </head>
 <body>
@@ -93,13 +110,6 @@
 
     </script>
 
-    <script id='myEval' type='text/ractive'>
-
-      expr: <input type="text" value={{toeval}}><br/>
-      result: {{myev(toeval)}}<br/>
-
-    </script>
-   
     <script>
       var ractive = new Ractive({
       el: 'container',
@@ -108,16 +118,67 @@
       });
     </script>
 
+
+    <script id='myEval' type='text/ractive'>
+
+      expr: <input type="text" value={{toeval}}><br/>
+      result: {{{myev(toeval)}}}<br/>
+
+    </script>
+   
     <script>
       var evalRactive = new Ractive({
       el: 'evalContainer',
       template: '#myEval',
       data: {myev: function(i) {
-      return eval(i);
+        return syntaxHighlight(JSON.stringify(eval(i), undefined, 4));
       }
       }
       });
     </script>
+
+    
+    <p class="mydrag"> Here be dragons </p>
+
+    <!-- Stolen from http://jsfiddle.net/KJQ9K/ -->
+
+    <script>
+
+function output(inp) {
+    document.body.appendChild(document.createElement('pre')).innerHTML = inp;
+}
+
+function syntaxHighlight(json) {
+    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        var cls = 'number';
+        if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+                cls = 'key';
+            } else {
+                cls = 'string';
+            }
+        } else if (/true|false/.test(match)) {
+            cls = 'boolean';
+        } else if (/null/.test(match)) {
+            cls = 'null';
+        }
+        return '<span class="' + cls + '">' + match + '</span>';
+    });
+}
+
+var obj = {a:1, 'b':'foo', c:[false,'false',null, 'null', {d:{e:1.3e5,f:'1.3e5'}}]};
+var str = JSON.stringify(obj, undefined, 4);
+
+output(str);
+output(syntaxHighlight(str));
+</script>
+
+<!-- end of Stolen from http://jsfiddle.net/KJQ9K/ -->
+
+
+<p class="mydrag"> end dragons </p>
+
 
 
 <h1>Original index.html</h1>
