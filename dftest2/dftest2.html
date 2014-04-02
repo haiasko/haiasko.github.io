@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Me tinkering</title>
+
+    <!-- Bootstrap's tinkering -->
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -14,6 +15,8 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- End Bootstrap's tinkering -->
 
     <!-- Ractive tinkering here -->
 
@@ -44,36 +47,80 @@
     <!-- Latest Ractive, change to CDN -->
     <script src='Ractive.js'></script>
 
+    <!-- end Ractive tinkering  -->
+
+    <!-- my stuff -->
+
     <style>
         body{
-            font-family:sans-serif, Arial;
+        font-family:sans-serif, Arial;
         }
+	.myred {
+	color:red;
+	}
     </style
 
+    <!-- end my stuff -->
 
 </head>
 <body>
 
     <h1>My DB page</h1>
 
+    <p class=myred>  start </p>
+
     <div id='container'></div>
+
+    <p>--------</p>
+
+    <div id='evalContainer'></div>
+
+    <p class="myred"> end </p>
     
     <script id='myTemplate' type='text/ractive'>
-      <p>{{greeting}}, {{recipient}}!</p>
+
+      {{#loggedIn}}
+      <p>Logged in: {{loggedIn}}</p>
+      <button onclick="ractive.set('loggedIn', false)">Log Out</button>
+      {{/loggedIn}}
+
+      {{^loggedIn}}
+      <p>You are not logged in</p>
+      E-mail: <input type="email" value={{email}}><br/>
+      Password: <input type="password" id="password"><br/>
+      <button onclick="ractive.set('loggedIn', {{email}})">Log In</button>
+      {{/loggedIn}}
+
+    </script>
+
+    <script id='myEval' type='text/ractive'>
+
+      expr: <input type="text" value={{toeval}}><br/>
+      result: {{myev(toeval)}}<br/>
+
     </script>
    
-    <script src='Ractive.js'></script>
-
     <script>
       var ractive = new Ractive({
       el: 'container',
       template: '#myTemplate',
-      data: { greeting: 'Hello', recipient: 'world' }
+      data: { loggedIn: false }
+      });
+    </script>
+
+    <script>
+      var evalRactive = new Ractive({
+      el: 'evalContainer',
+      template: '#myEval',
+      data: {myev: function(i) {
+      return eval(i);
+      }
+      }
       });
     </script>
 
 
-<h1>Original DBFactory index.html</h1>
+<h1>Original index.html</h1>
 
 <p>
     This auto-generated index.html file is the starting point for your application.
