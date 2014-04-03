@@ -61,6 +61,9 @@
 	.mydrag {
 	color:purple;
 	}
+	.mystatus {
+	color:blue;
+	}
     </style
 
     <!-- end my stuff -->
@@ -96,6 +99,10 @@
     
     <script id='myTemplate' type='text/ractive'>
 
+      {{#status}}
+      <p class="mystatus">{{status}}</p>
+      {{/status}}
+
       {{#loggedIn}}
       <p>Logged in: {{loggedIn}}</p>
       <button onclick="ractive.set('loggedIn', false)">Log Out</button>
@@ -103,9 +110,9 @@
 
       {{^loggedIn}}
       <p>You are not logged in</p>
-      E-mail: <input type="email" value={{email}}><br/>
-      Password: <input type="password" id="password"><br/>
-      <button onclick="ractive.set('loggedIn', {{email}})">Log In</button>
+      E-mail: <input type="email" value='{{email}}'><br/>
+      Password: <input type="password" value='{{password}}'><br/>
+      <button onclick="myLogin()">Log In</button>
       {{/loggedIn}}
 
     </script>
@@ -114,18 +121,52 @@
       var ractive = new Ractive({
       el: 'container',
       template: '#myTemplate',
-      data: { loggedIn: false }
+      data: { status: "", loggedIn: false, email: undefined, password: undefined }
       });
     </script>
 
 
     <script id='myEval' type='text/ractive'>
 
-      expr: <input type="text" value={{toeval}}><br/>
+      expr: <input type="text" value='{{toeval}}'><br/>
       result: <pre>{{{myev(toeval)}}}</pre><br/>
 
     </script>
    
+    <!-- My main stuff here -->
+
+    <script>
+    
+      function myLogin () {
+        var body = {
+          email: ractive.get('email'),
+          password: ractive.get('password')
+        };
+        window.df.apis.user.login({body: body}, function (response) {
+          
+        //assign session token to be used for the session duration
+            window.authorizations.add("X-DreamFactory-Session-Token", new ApiKeyAuthorization("X-Dreamfactory-Session-Token", response.session_id, 'header'));
+            ractive.set('loggedIn', true); 
+        }, function(response){
+            ractive.set('status', myGetErrorString(response));
+            ractive.set('loggedIn', false); 
+        });
+      }
+
+    myGetErrorString = function(response){
+        var msg = "An error occurred, but the server provided no additional information.";
+        if (response.content && response.content.data && response.content.data.error) {
+            msg = response.content.data.error[0].message;
+        }
+        msg = msg.replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&').replace(/&apos;/g, '\'');
+        return msg;
+    };
+												</script>
+      
+    <!-- end My main stuff here -->
+
+    <!-- simple expr eval for debugging -->
+
     <script>
       var evalRactive = new Ractive({
       el: 'evalContainer',
