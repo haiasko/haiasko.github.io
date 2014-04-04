@@ -52,11 +52,11 @@
     <!-- my stuff -->
 
     <style>
-        body{ font-family:sans-serif, Arial; }
-	.myred { color:red; }
-	.mydrag { color:purple;	}
-	.mystatus { color:blue; }
-	.mycontainer { outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+        body{ font-family: sans-serif, Arial; }
+	.myred { color: red; clear: both; }
+	.mydrag { color: purple; }
+	.mystatus { color: blue; }
+	.mycontainer { width: 30%; float: left; outline: 1px solid #ccc; padding: 5px; margin: 5px; }
     </style
 
     <!-- end my stuff -->
@@ -82,17 +82,41 @@
 
     <p class=myred>  start </p><hr>
 
-    <div class=mycontainer id='container'></div>
+    <div class=mycontainer id='loginContainer'></div>
 
     <div class=mycontainer id='tablesContainer'>Tables</div>
 
     <div class=mycontainer id='tableContainer'>Table</div>
 
-    <p>--------</p>
+    <p class="myred"> end </p><hr>
 
-    <hr><p class="myred"> end </p>
-    
-    <script id='myTemplate' type='text/ractive'>
+    <!-- sample empty template -->
+    <script id='emptyTemplate' type='text/ractive'>
+      
+      {{^loggedIn}}
+      <p>You are not logged in</p>
+      {{/loggedIn}}
+      
+      {{#loggedIn}}
+      
+      <!-- Put real stuff here -->
+      
+      {{/loggedIn}}
+      
+    </script>
+
+    <!-- sample empty script -->
+    <script type='text/javascript'>
+      var emptyRactive = new Ractive({
+      el: 'emptyContainer',
+      template: '#emptyTemplate',
+      data: { 
+      }
+      });
+    </script>
+
+    <!-- Login template -->
+    <script id='loginTemplate' type='text/ractive'>
 
       {{#status}}
       <p class="mystatus">{{status}}</p>
@@ -100,7 +124,7 @@
 
       {{#loggedIn}}
       <p>Logged in: {{loggedIn}}</p>
-      <button onclick="ractive.set('loggedIn', false)">Log Out</button>
+      <button onclick="logout">Log Out</button>
       {{/loggedIn}}
 
       {{^loggedIn}}
@@ -111,42 +135,89 @@
       {{/loggedIn}}
 
     </script>
-
-    <script>
-      var ractive = new Ractive({
-      el: 'container',
-      template: '#myTemplate',
+    
+    <!-- Login script -->
+    <script type='text/javascript'>
+      var loginRactive = new Ractive({
+      el: 'loginContainer',
+      template: '#loginTemplate',
       data: { status: "", loggedIn: false, email: undefined, password: undefined, response: undefined }
       });
     </script>
 
+    <!-- Tables list template -->
+    <script id='tablesTemplate' type='text/ractive'>
+      {{^ractive.loggedIn}}
+      <p>You are not logged in</p>
+      {{/ractive.loggedIn}}
 
-    <script id='myEval' type='text/ractive'>
+      {{#loggedIn}}
 
-      expr: <input type="text" value='{{toeval}}'><br/>
-      result: <pre>{{{myev(toeval)}}}</pre><br/>
-
+      <!-- Put real stuff here -->
+      Table list
+      
+      {{/loggedIn}}
+      
     </script>
-   
+    
+    <!-- Tables list script -->
+    <script type='text/javascript'>
+      var tablesRactive = new Ractive({
+      el: 'tablesContainer',
+      template: '#tablesTemplate',
+      data: { 
+      }
+      });
+    </script>
+
+
+    <!-- Table details template -->
+    <script id='tableTemplate' type='text/ractive'>
+      {{^loggedIn}}
+      <p>You are not logged in</p>
+      {{/loggedIn}}
+
+      {{#loggedIn}}
+
+      <!-- Put real stuff here -->
+      Table detail
+      
+      {{/loggedIn}}
+    </script>
+
+    <!-- Tables details script -->
+    <script type='text/javascript'>
+      var tableRactive = new Ractive({
+      el: 'tableContainer',
+      template: '#tableTemplate',
+      data: { 
+      }
+      });
+    </script>
+
+
     <!-- My main stuff here -->
 
-    <script>
+    <script type='text/javascript'>
+
+      app = { loggedIn: false, uid: undefined, uname: undefined, response: undefined, status: undefined};
     
       function myLogin () {
         var body = {
-          email: ractive.get('email'),
-          password: ractive.get('password')
+          email: loginRactive.get('email'),
+          password: loginRactive.get('password')
         };
         window.df.apis.user.login({body: body}, function (response) {
           
         //assign session token to be used for the session duration
             window.authorizations.add("X-DreamFactory-Session-Token", new ApiKeyAuthorization("X-Dreamfactory-Session-Token", response.session_id, 'header'));
-            ractive.set('loggedIn', true); 
-            ractive.set('response', response); 
+            loginRactive.set('status', ""); 
+            loginRactive.set('loggedIn', true); 
+            loginRactive.set('response', response); 
         }, function(response){
-            ractive.set('status', myGetErrorString(response));
-            ractive.set('loggedIn', false); 
-            ractive.set('response', response); 
+            loginRactive.set('status', myGetErrorString(response));
+            loginRactive.set('loggedIn', false); 
+            loginRactive.set('response', response); 
         });
       }
 
@@ -167,6 +238,17 @@
     <p class="mydrag"> Here be dragons </p>
 
     <div id='evalContainer'></div>
+
+    <!-- Eval template -->
+
+    <script id='myEval' type='text/ractive'>
+
+      expr: <input type="text" value='{{toeval}}'><br/>
+      result: <pre>{{{myev(toeval)}}}</pre><br/>
+
+    </script>
+
+    <!-- Eval script  -->
 
     <script>
       var evalRactive = new Ractive({
