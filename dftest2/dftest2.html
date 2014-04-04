@@ -97,8 +97,8 @@
       {{/status}}
 
       {{#loggedIn}}
-      <p>Logged in: {{loggedIn}}</p>
-      <button onclick="logout">Log Out</button>
+      <p>hi {{uname}}</p>
+      <button onclick="myLogout">Log Out</button>
       {{/loggedIn}}
 
       {{^loggedIn}}
@@ -115,22 +115,19 @@
       var loginRactive = new Ractive({
       el: 'loginContainer',
       template: '#loginTemplate',
-      data: { status: "", loggedIn: false, email: undefined, password: undefined, response: undefined }
+      data: { status: "", loggedIn: false, email: undefined, password: undefined, response: undefined, uid: undefined, uname: undefined }
       });
     </script>
 
     <!-- Tables list template -->
     <script id='tablesTemplate' type='text/ractive'>
-      {{^ractive.loggedIn}}
-      <p>You are not logged in</p>
-      {{/ractive.loggedIn}}
-
-      {{#loggedIn}}
-
-      <!-- Put real stuff here -->
-      Table list
-      
-      {{/loggedIn}}
+      <p>Tables</p>
+      <ul>
+      {{#tables.resource}}
+      <li>{{name}}</li>
+      {{/tables.resource}}
+      </ul>
+      <br><button onclick="this.refresh()">Refresh</button>
       
     </script>
     
@@ -140,6 +137,7 @@
       el: 'tablesContainer',
       template: '#tablesTemplate',
       data: { 
+       tables: ["table1", "table2"]
       }
       });
     </script>
@@ -174,8 +172,6 @@
 
     <script type='text/javascript'>
 
-      app = { loggedIn: false, uid: undefined, uname: undefined, response: undefined, status: undefined};
-    
       function myLogin () {
         var body = {
           email: loginRactive.get('email'),
@@ -188,12 +184,28 @@
             loginRactive.set('status', ""); 
             loginRactive.set('loggedIn', true); 
             loginRactive.set('response', response); 
+
+            loginRactive.set('uid', response.id); 
+            loginRactive.set('uname', response.display_name); 
+
+            df.apis.db.getTables(undefined, function (response) {
+              tablesRactive.set('tables', response)
+            }, function(response){
+            loginRactive.set('status', myGetErrorString(response));
+            });
+
         }, function(response){
             loginRactive.set('status', myGetErrorString(response));
             loginRactive.set('loggedIn', false); 
             loginRactive.set('response', response); 
         });
       }
+
+    function myLogout () {
+      window.df.apis.user.logout();
+      loginRactive.set('loggedIn', false); 
+    }
+
 
     myGetErrorString = function(response){
         var msg = "An error occurred, but the server provided no additional information.";
