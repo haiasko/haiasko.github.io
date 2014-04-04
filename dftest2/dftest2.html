@@ -85,17 +85,15 @@
 </head>
 <body>
 
-    <h1>My DB page</h1>
+    <h1>DFtest2</h1>
 
-    <p class=myred>  start </p>
+    <p class=myred>  start </p><hr>
 
     <div id='container'></div>
 
     <p>--------</p>
 
-    <div id='evalContainer'></div>
-
-    <p class="myred"> end </p>
+    <hr><p class="myred"> end </p>
     
     <script id='myTemplate' type='text/ractive'>
 
@@ -121,7 +119,7 @@
       var ractive = new Ractive({
       el: 'container',
       template: '#myTemplate',
-      data: { status: "", loggedIn: false, email: undefined, password: undefined }
+      data: { status: "", loggedIn: false, email: undefined, password: undefined, response: undefined }
       });
     </script>
 
@@ -147,9 +145,11 @@
         //assign session token to be used for the session duration
             window.authorizations.add("X-DreamFactory-Session-Token", new ApiKeyAuthorization("X-Dreamfactory-Session-Token", response.session_id, 'header'));
             ractive.set('loggedIn', true); 
+            ractive.set('response', response); 
         }, function(response){
             ractive.set('status', myGetErrorString(response));
             ractive.set('loggedIn', false); 
+            ractive.set('response', response); 
         });
       }
 
@@ -161,11 +161,15 @@
         msg = msg.replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&').replace(/&apos;/g, '\'');
         return msg;
     };
-												</script>
+													</script>
       
     <!-- end My main stuff here -->
 
     <!-- simple expr eval for debugging -->
+
+    <p class="mydrag"> Here be dragons </p>
+
+    <div id='evalContainer'></div>
 
     <script>
       var evalRactive = new Ractive({
@@ -178,16 +182,9 @@
       });
     </script>
 
-    
-    <p class="mydrag"> Here be dragons </p>
-
     <!-- Stolen from http://jsfiddle.net/KJQ9K/ -->
 
     <script>
-
-function output(inp) {
-    document.body.appendChild(document.createElement('pre')).innerHTML = inp;
-}
 
 function syntaxHighlight(json) {
     json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -208,11 +205,14 @@ function syntaxHighlight(json) {
     });
 }
 
-var obj = {a:1, 'b':'foo', c:[false,'false',null, 'null', {d:{e:1.3e5,f:'1.3e5'}}]};
-var str = JSON.stringify(obj, undefined, 4);
+<!-- var obj = {a:1, 'b':'foo', c:[false,'false',null, 'null', {d:{e:1.3e5,f:'1.3e5'}}]}; -->
+<!-- var str = JSON.stringify(obj, undefined, 4); -->
+<!-- function output(inp) { -->
+<!--     document.body.appendChild(document.createElement('pre')).innerHTML = inp; -->
+<!-- } -->
+<!-- output(str); -->
+<!-- output(syntaxHighlight(str)); -->
 
-output(str);
-output(syntaxHighlight(str));
 </script>
 
 <!-- end of Stolen from http://jsfiddle.net/KJQ9K/ -->
@@ -222,105 +222,11 @@ output(syntaxHighlight(str));
 
 
 
-<h1>Original index.html</h1>
-
-<p>
-    This auto-generated index.html file is the starting point for your application.
-</p>
-
-<p>The Javascript SDK is a convenience wrapper for all the methods in our REST API. The SDK contains your REST endpoint and API key so you can start coding immediately. When a new service is provisioned in the Admin Console the JavaScript SDK will automatically include that service the next time your application is loaded.</p>
-
-<p>Access the SDK by using the "df" object. You can see the "df" object in your debugger by opening up the DOM inspection tab. The "df" object is attached to the "window" object. For example, using Chrome's Dev Tools, open the console and start typing "window.df.apis" to display all the methods and properties.</p>
-
-<p>Use of this SDK on the local file system requires "*" to be in your list of allowed hosts in the CORS configuration section of the Admin app.</p>
-<br/>
-<p>
-    View the <a href="readme.html">README</a> for helpful information and tutorials, including CORs access, authentication, and sessions.
-</p>
-
-<h3>Making API calls</h3>
-
-
-<p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-
-<p><b>Authenticate into your DreamFactory Services Platform</b><br/>
-<p>First, log in to your DreamFactory Services Platform to see these API calls work.</p>
-<p>
-
-    <input type="email" id="email"><br/>
-    <input type="password" id="password"><br/>
-    <button onclick="window.app.login()">Log In</button>
-<div id="login-status" style="color:blue"></div>
-
-
-<p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-<P><b>Retrieve records from the "todo" sample table located in your DreamFactory Services Platform</b></P>
-
-<pre>
-   window.df.apis.db.getRecords({table_name: "todo"}, function (response) {
-          //Do something with the data;
-            console.log(response);
-        });
-</pre>
-<button style="display:none" id="try-now-get" onclick="window.app.getTodos()">Try it Now</button><br/>
-<p><b>Response:</b></p>
-<textarea class="results" style="width:400px;height:200px" id="get-results">Loading APIs...</textarea>
-
-
-<p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-<P><b>Insert records into the "todo" sample table located in your DreamFactory Services Platform</b></P>
-
-<pre>
-        var item = {"record":[{"name":"New Item","complete":false}]};
-        window.df.apis.db.createRecords({"table_name":"todo", "body":item}, function(response) {
-            document.getElementById("post-results").innerHTML = JSON.stringify(response);
-        }, function(response) {
-            document.getElementById("post-results").innerHTML = JSON.stringify(response);
-        });
-</pre>
-<button style="display:none" id="try-now-post" onclick="window.app.addTodo()">Try it Now</button><br/>
-<p><b>Response:</b></p>
-<textarea class="results" style="width:400px;height:200px" id="post-results">Loading APIs...</textarea>
-
-<p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-<P><b>Update a record to be complete in the "todo" sample table located in your DreamFactory Services Platform</b></P>
-
-<pre>
-        var id= document.getElementById("update-id").value;
-        var complete = true;
-        var item = {"record":[{"id":id,"complete":complete}]};
-        df.apis.db.updateRecords({"table_name":"todo", "body":item}, function(response) {
-            document.getElementById("update-results").innerHTML = JSON.stringify(response);
-        }, function(response) {
-            document.getElementById("update-results").innerHTML = JSON.stringify(response);
-        });
-</pre>
-ID of record to update : <input type="text" id="update-id">
-<button style="display:none" id="try-now-update" onclick="window.app.updateTodo()">Try it Now</button><br/>
-<p><b>Response:</b></p>
-<textarea class="results" style="width:400px;height:200px" id="update-results">Loading APIs...</textarea>
-
-<p>---------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-
-<P><b>Delete a record from the "todo" sample table located in your DreamFactory Services Platform</b></P>
-<pre>
-        var id= document.getElementById("delete-id").value;
-        window.df.apis.db.deleteRecords({"table_name":"todo", "ids":id}, function(response) {
-            document.getElementById("delete-results").innerHTML = JSON.stringify(response);
-        }, function(response) {
-            document.getElementById("delete-results").innerHTML = JSON.stringify(response);
-        });
-</pre>
-ID of record to delete : <input type="text" id="delete-id">
-<button style="display:none" id="try-now-delete" onclick="window.app.deleteTodo()">Try it Now</button><br/>
-<p><b>Response:</b></p>
-<textarea class="results" style="width:400px;height:200px" id="delete-results">Loading APIs...</textarea>
-
 
 <script src='lib/shred.bundle.js' type='text/javascript'></script>
 <script src='lib/swagger.js' type='text/javascript'></script>
 <script src='lib/sdk-init.js' type='text/javascript'></script>
-<script src='app.js' type='text/javascript'></script>
+<script src='dftest2.js' type='text/javascript'></script>
 
 </body>
 </html>
