@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample</title>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Latest Ractive, change to CDN -->
+    <script src='Ractive.js'></script>
+
+    <style>
+        body{ font-family: sans-serif, Arial; }
+	.myred { color: red; clear: both; }
+	.mydrag { color: purple; }
+	.mystatus { color: blue; }
+	.mycontainer { width: 30%; float: left; outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+    </style
+
+    <!-- Here be dragons styles -->
+
+    <!-- Stolen from http://jsfiddle.net/KJQ9K/ -->
+
+    <style>
+      pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+      .string { color: green; }
+      .number { color: darkorange; }
+      .boolean { color: blue; }
+      .null { color: magenta; }
+      .key { color: red; }
+    </style>
+    <!-- end Here be dragons styles -->
+
+</head>
+<body>
+
+    <h1>Sample</h1>
+
+    <p class=myred>  start </p><hr>
+
+    <div class=mycontainer id='emptyContainer'></div>
+
+    <p class="myred"> end </p><hr>
+
+    <!-- sample empty template -->
+    <script id='emptyTemplate' type='text/ractive'>
+      Tinker here:</br>
+      
+      Direct call of Object.keys: </br>
+      {{# Object.keys(records[0]) }} {{.}} {{/ okr }}
+            
+      Trying with headings: </br>
+      
+      {{#headings:k}} {{headings[k]}} {{/headings}} </br>
+
+      And here the records: </br>
+      {{#records:i}}
+      rec # {{i}}: </br>
+      {{#headings:k}} {{records[i][headings[k]]}} {{/headings}} </br>
+      {{/records}}
+
+    </script>
+
+    <!-- sample empty script -->
+    <script type='text/javascript'>
+      var emptyRactive = new Ractive({
+      el: 'emptyContainer',
+      template: '#emptyTemplate',
+      data: { 
+      'headings': undefined,
+      'records' :
+
+      [
+        {
+            "id": 1,
+            "name": "gotta do this",
+            "complete": false
+        },
+        {
+            "id": 2,
+            "name": "and this too",
+            "complete": false
+        },
+        {
+            "id": 3,
+            "name": "and this from jquery",
+            "complete": false
+        }
+    ],
+
+      }
+      });
+      emptyRactive.set('headings', Object.keys(emptyRactive.get('records')[0]));
+    </script>
+
+
+    <!-- simple expr eval for debugging -->
+
+    <p class="mydrag"> Here be dragons </p>
+
+    <div id='evalContainer'></div>
+
+    <!-- Eval template -->
+
+    <script id='myEval' type='text/ractive'>
+
+      expr: <input type="text" value='{{toeval}}'><br/>
+      result: <pre>{{{myev(toeval)}}}</pre><br/>
+
+    </script>
+
+    <!-- Eval script  -->
+
+    <script>
+      var evalRactive = new Ractive({
+      el: 'evalContainer',
+      template: '#myEval',
+      data: {myev: function(i) {
+        return syntaxHighlight(JSON.stringify(eval(i), undefined, 4));
+      }
+      }
+      });
+    </script>
+
+    <!-- Stolen from http://jsfiddle.net/KJQ9K/ -->
+
+    <script>
+
+function syntaxHighlight(json) {
+    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        var cls = 'number';
+        if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+                cls = 'key';
+            } else {
+                cls = 'string';
+            }
+        } else if (/true|false/.test(match)) {
+            cls = 'boolean';
+        } else if (/null/.test(match)) {
+            cls = 'null';
+        }
+        return '<span class="' + cls + '">' + match + '</span>';
+    });
+}
+
+<!-- var obj = {a:1, 'b':'foo', c:[false,'false',null, 'null', {d:{e:1.3e5,f:'1.3e5'}}]}; -->
+<!-- var str = JSON.stringify(obj, undefined, 4); -->
+<!-- function output(inp) { -->
+<!--     document.body.appendChild(document.createElement('pre')).innerHTML = inp; -->
+<!-- } -->
+<!-- output(str); -->
+<!-- output(syntaxHighlight(str)); -->
+
+</script>
+
+<!-- end of Stolen from http://jsfiddle.net/KJQ9K/ -->
+
+
+<p class="mydrag"> end dragons </p>
+
+</body>
+</html>
