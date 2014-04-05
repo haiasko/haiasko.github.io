@@ -124,7 +124,7 @@
       <p>Tables</p>
       <ul>
       {{#tables.resource}}
-      <li>{{name}}</li>
+      <li onclick="selectTable('{{name}}')">{{name}}</li>
       {{/tables.resource}}
       </ul>
       <br><button onclick="this.refresh()">Refresh</button>
@@ -137,7 +137,9 @@
       el: 'tablesContainer',
       template: '#tablesTemplate',
       data: { 
-       tables: ["table1", "table2"]
+       tables: undefined,
+       records: undefined,
+       response: undefined
       }
       });
     </script>
@@ -145,26 +147,58 @@
 
     <!-- Table details template -->
     <script id='tableTemplate' type='text/ractive'>
-      {{^loggedIn}}
-      <p>You are not logged in</p>
-      {{/loggedIn}}
+      {{^table}}
+      <p>Select a table</p>
+      {{/table}}
 
-      {{#loggedIn}}
-
-      <!-- Put real stuff here -->
-      Table detail
+      {{#table}}
       
-      {{/loggedIn}}
+      <table>
+
+	<tr>
+	  {{#headers}}
+	  <th>{{.}}</th>
+	  {{/headers}}
+	</tr>
+
+	{{#records:r}}
+	<tr>
+	  {{#headers:h}}
+	  <td>{{records[r][headers[h]]}}</td>
+	  {{/headers}}
+	</tr>
+	{{/records}}
+	
+	{{/table}}
+
+      </table>
+
     </script>
 
-    <!-- Tables details script -->
+    <!-- Table details script -->
     <script type='text/javascript'>
       var tableRactive = new Ractive({
       el: 'tableContainer',
       template: '#tableTemplate',
       data: { 
+        table: undefined,
+        headers: undefined,
+        records: undefined,
+        response: undefined,
       }
       });
+
+      function selectTable (table) {
+        tableRactive.set('table', table);
+        df.apis.db.getRecords({'table_name': table}, function (response) { 
+
+          var records = response.record;
+
+          tableRactive.set('response', response); // save it for debugging
+          tableRactive.set('headers', Object.keys(records[0]));
+          tableRactive.set('records', records);
+        }); // missing failure func and what happens if no rows?
+      };
     </script>
 
 
@@ -188,10 +222,12 @@
             loginRactive.set('uid', response.id); 
             loginRactive.set('uname', response.display_name); 
 
+           <!-- Get the tables list and set it -->
+
             df.apis.db.getTables(undefined, function (response) {
               tablesRactive.set('tables', response)
             }, function(response){
-            loginRactive.set('status', myGetErrorString(response));
+              loginRactive.set('status', myGetErrorString(response));
             });
 
         }, function(response){
@@ -199,7 +235,7 @@
             loginRactive.set('loggedIn', false); 
             loginRactive.set('response', response); 
         });
-      }
+      };
 
     function myLogout () {
       window.df.apis.user.logout();
