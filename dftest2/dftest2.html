@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Me tinkering</title>
 
     <!-- Bootstrap's tinkering (without the Bootstrap) -->
@@ -12,9 +12,9 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
     <!-- End Bootstrap's tinkering -->
 
@@ -26,43 +26,21 @@
     <!-- my stuff -->
 
     <style>
-        body{ font-family: sans-serif, Arial; }
-	.myred { color: red; clear: both; }
-	.mydrag { color: purple; }
-	.mystatus { color: blue; }
-	.mycontainer { width: 30%; float: left; outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+      body{ font-family: sans-serif, Arial; }
+      .mystatus { color: blue; }
+      .mycontainer { width: 30%; float: left; outline: 1px solid #ccc; padding: 5px; margin: 5px; }
     </style
-
-    <!-- end my stuff -->
-
-    <!-- Here be dragons styles -->
-
-    <!-- Stolen from http://jsfiddle.net/KJQ9K/ -->
-
-    <style>
-      pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
-      .string { color: green; }
-      .number { color: darkorange; }
-      .boolean { color: blue; }
-      .null { color: magenta; }
-      .key { color: red; }
-    </style>
-    <!-- end Here be dragons styles -->
 
 </head>
 <body>
 
     <h1>DFtest2</h1>
 
-    <p class=myred>  start </p><hr>
-
     <div class=mycontainer id='loginContainer'></div>
 
     <div class=mycontainer id='tablesContainer'>Tables</div>
 
     <div class=mycontainer id='tableContainer'>Table</div>
-
-    <p class="myred"> end </p><hr>
 
     <!-- sample empty template -->
     <script id='emptyTemplate' type='text/ractive'>
@@ -77,16 +55,6 @@
       
       {{/loggedIn}}
       
-    </script>
-
-    <!-- sample empty script -->
-    <script type='text/javascript'>
-      var emptyRactive = new Ractive({
-      el: 'emptyContainer',
-      template: '#emptyTemplate',
-      data: { 
-      }
-      });
     </script>
 
     <!-- Login template -->
@@ -110,15 +78,6 @@
 
     </script>
     
-    <!-- Login script -->
-    <script type='text/javascript'>
-      var loginRactive = new Ractive({
-      el: 'loginContainer',
-      template: '#loginTemplate',
-      data: { status: "", loggedIn: false, email: undefined, password: undefined, response: undefined, uid: undefined, uname: undefined }
-      });
-    </script>
-
     <!-- Tables list template -->
     <script id='tablesTemplate' type='text/ractive'>
       <p>Tables</p>
@@ -131,20 +90,6 @@
       
     </script>
     
-    <!-- Tables list script -->
-    <script type='text/javascript'>
-      var tablesRactive = new Ractive({
-      el: 'tablesContainer',
-      template: '#tablesTemplate',
-      data: { 
-       tables: undefined,
-       records: undefined,
-       response: undefined
-      }
-      });
-    </script>
-
-
     <!-- Table details template -->
     <script id='tableTemplate' type='text/ractive'>
       {{^table}}
@@ -174,155 +119,6 @@
       </table>
 
     </script>
-
-    <!-- Table details script -->
-    <script type='text/javascript'>
-      var tableRactive = new Ractive({
-      el: 'tableContainer',
-      template: '#tableTemplate',
-      data: { 
-        table: undefined,
-        headers: undefined,
-        records: undefined,
-        response: undefined,
-      }
-      });
-
-      function selectTable (table) {
-        tableRactive.set('table', table);
-        df.apis.db.getRecords({'table_name': table}, function (response) { 
-
-          var records = response.record;
-
-          tableRactive.set('response', response); // save it for debugging
-          tableRactive.set('headers', Object.keys(records[0]));
-          tableRactive.set('records', records);
-        }); // missing failure func and what happens if no rows?
-      };
-    </script>
-
-
-    <!-- My main stuff here -->
-
-    <script type='text/javascript'>
-
-      function myLogin () {
-        var body = {
-          email: loginRactive.get('email'),
-          password: loginRactive.get('password')
-        };
-        window.df.apis.user.login({body: body}, function (response) {
-          
-        //assign session token to be used for the session duration
-            window.authorizations.add("X-DreamFactory-Session-Token", new ApiKeyAuthorization("X-Dreamfactory-Session-Token", response.session_id, 'header'));
-            loginRactive.set('status', ""); 
-            loginRactive.set('loggedIn', true); 
-            loginRactive.set('response', response); 
-
-            loginRactive.set('uid', response.id); 
-            loginRactive.set('uname', response.display_name); 
-
-           <!-- Get the tables list and set it -->
-
-            df.apis.db.getTables(undefined, function (response) {
-              tablesRactive.set('tables', response)
-            }, function(response){
-              loginRactive.set('status', myGetErrorString(response));
-            });
-
-        }, function(response){
-            loginRactive.set('status', myGetErrorString(response));
-            loginRactive.set('loggedIn', false); 
-            loginRactive.set('response', response); 
-        });
-      };
-
-    function myLogout () {
-      window.df.apis.user.logout();
-      loginRactive.set('loggedIn', false); 
-    }
-
-
-    myGetErrorString = function(response){
-        var msg = "An error occurred, but the server provided no additional information.";
-        if (response.content && response.content.data && response.content.data.error) {
-            msg = response.content.data.error[0].message;
-        }
-        msg = msg.replace(/&quot;/g, '"').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&').replace(/&apos;/g, '\'');
-        return msg;
-    };
-													</script>
-      
-    <!-- end My main stuff here -->
-
-    <!-- simple expr eval for debugging -->
-
-    <p class="mydrag"> Here be dragons </p>
-
-    <div id='evalContainer'></div>
-
-    <!-- Eval template -->
-
-    <script id='myEval' type='text/ractive'>
-
-      expr: <input type="text" value='{{toeval}}'><br/>
-      result: <pre>{{{myev(toeval)}}}</pre><br/>
-
-    </script>
-
-    <!-- Eval script  -->
-
-    <script>
-      var evalRactive = new Ractive({
-      el: 'evalContainer',
-      template: '#myEval',
-      data: {myev: function(i) {
-        return syntaxHighlight(JSON.stringify(eval(i), undefined, 4));
-      }
-      }
-      });
-    </script>
-
-    <!-- Stolen from http://jsfiddle.net/KJQ9K/ -->
-
-    <script>
-
-function syntaxHighlight(json) {
-    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
-        var cls = 'number';
-        if (/^"/.test(match)) {
-            if (/:$/.test(match)) {
-                cls = 'key';
-            } else {
-                cls = 'string';
-            }
-        } else if (/true|false/.test(match)) {
-            cls = 'boolean';
-        } else if (/null/.test(match)) {
-            cls = 'null';
-        }
-        return '<span class="' + cls + '">' + match + '</span>';
-    });
-}
-
-<!-- var obj = {a:1, 'b':'foo', c:[false,'false',null, 'null', {d:{e:1.3e5,f:'1.3e5'}}]}; -->
-<!-- var str = JSON.stringify(obj, undefined, 4); -->
-<!-- function output(inp) { -->
-<!--     document.body.appendChild(document.createElement('pre')).innerHTML = inp; -->
-<!-- } -->
-<!-- output(str); -->
-<!-- output(syntaxHighlight(str)); -->
-
-</script>
-
-<!-- end of Stolen from http://jsfiddle.net/KJQ9K/ -->
-
-
-<p class="mydrag"> end dragons </p>
-
-
-
 
 <script src='lib/shred.bundle.js' type='text/javascript'></script>
 <script src='lib/swagger.js' type='text/javascript'></script>
