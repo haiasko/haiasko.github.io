@@ -3,7 +3,7 @@ layout: post
 title: "Disqus warns about Heartbleed"
 description: ""
 category: news
-tags: [security, ssl, openssl, vulnerability]
+tags: [security, ssl, openssl, vulnerability, disqus]
 ---
 {% include JB/setup %}
 {% include links %}
