@@ -9,4 +9,4 @@ tags: [security, ssl, openssl, vulnerability, disqus]
 {% include links %}
 
 [Disqus] just warned about the [Heartbleed](http://heartbleed.com/)
-vulnerability of OpenSSL.  Rushing off to update everything :)
+vulnerability of [OpenSSL].  Rushing off to update everything :)
