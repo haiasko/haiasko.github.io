@@ -3,7 +3,7 @@ layout: post
 title: "Monsanto, biotech stocks plummet the day after activists launch Operation Monsanto Stock Plunge"
 description: ""
 category: news
-tags: [monsanto, biotech, GMO]
+tags: [monsanto, biotech, GMO, health]
 ---
 {% include JB/setup %}
 
