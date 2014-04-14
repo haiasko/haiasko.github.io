@@ -2,8 +2,9 @@
 layout: page
 title: TSO stuff
 category: scratch
-tags: [games, tso]
+tags: [games, tso, evil_j]
 ---
+{% include links %}
 
 ## TSO test server checklist (roughly in that order) at account wipe:
 
@@ -23,6 +24,23 @@ revealing friends'' collectibles (bronze flag/blue flag)
 
 ## Adventure notes
 
+### RB ###
+
+Starting from [Evil_J] Major guide - <http://i.imgur.com/frON8X9.png>
+
+- giving this simulator a try -
+<http://settlersonlinemaps.com/fastsim.php?LangCode=2>.
+
+- gave up on it, back to old school:
+  <http://settlersonlinesimulator.com/dso_kampfsimulator/en/?no-ref=true&u_1940=120&u_1947=80&adventure_id=19>
+  and following the best sims.  Hm, not much use either this one but checkout my first Org/Emacs table [here](table.html) :)
+
+
+
+- C1 - 45R 171C
+
+
+
 ### DP
 
-only recruits - MMA 281R loss (one wave DC for 150R loss)
+only recruits - MoMA 281R loss (one wave DC for 150R loss)
