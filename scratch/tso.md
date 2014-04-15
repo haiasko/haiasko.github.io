@@ -39,7 +39,9 @@ Starting from [Evil_J] Major guide - <http://i.imgur.com/frON8X9.png>
 
 - C1 - 45R 171C
 
+### BK ###
 
+instead of 129K 121R - Moma with 25K 195R
 
 ### DP
 
