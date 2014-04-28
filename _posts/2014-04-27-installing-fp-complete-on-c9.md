@@ -30,6 +30,7 @@ tags: [haskell, ghc, c9, fpcomplete, cloud 9, FP Complete, yesod]
 - jekyll needed language env vars on C9 cuz of new version - see c9rj
 and c9rjsw (for setting the port and IP)
 
-- we might be quite far away from installing an fp-complete ide on C9 or openshift but meanwhile fpcomplete made an emacs interface - <https://www.fpcomplete.com/blog/2013/12/api-emacs>
+- we might be quite far away from installing an fp-complete ide on C9 or openshift. fpcomplete is making an emacs interface - <https://www.fpcomplete.com/blog/2013/12/api-emacs>.   
+It requires at least a personal license and emacs 24.
 
-- openshift doesn't persist between rebuilds (unless you tell it to) so i'll stick to C9 - can do all the editing there and still have a useable ghc on openshift
+- openshift doesn't persist between rebuilds (unless you tell it to) so i'll stick to C9 - can do all the editing there and still have a useable ghc on openshift.
