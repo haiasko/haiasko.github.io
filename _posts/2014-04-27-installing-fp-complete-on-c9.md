@@ -17,6 +17,10 @@ tags: [haskell, ghc, c9, fpcomplete, cloud 9, FP Complete]
 <https://gmplib.org/list-archives/gmp-announce/2009-May/000023.html>
 
 - gmp compiles ok, C9 is 64bit, naturally, so i need to get the 64bit haskell
+- just exceeded C9 quota, seems to be 1G 
+- going for Gideon's Yesod cartridge for openshift @ <http://www.haskell.org/haskellwiki/Web/Cloud>
+- here is the bare bones (so far) yesod site - <http://yesod-haiasko.rhcloud.com/>
+
 
 ### Notes
 
