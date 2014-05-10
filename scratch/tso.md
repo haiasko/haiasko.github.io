@@ -6,6 +6,17 @@ tags: [games, tso, evil_j]
 ---
 {% include links %}
 
+##
+
+links to guides
+
+### Bandit nest
+http://forum.thesettlersonline.com/threads/26638-Guide-corona88-adventure-guides?p=255255&viewfull=1#post255255
+
+### MSE
+
+with loot overview at the end - http://forum.thesettlersonline.com/threads/16332-Guide-Killste-Collected-Adventure-Guides-by-Various-Authors?p=247176&posted=1#post247176
+
 ## TSO test server checklist (roughly in that order) at account wipe:
 
 - buy jolly geologists, train 1 for max copper, and science him all
