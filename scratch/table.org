@@ -44,6 +44,29 @@ on a second thought ... Pierro pizza is way too cute :)
 [23:47] RobertoDiDamo: 300 tit, 1000 marble, 800brew, choc rabbit, 700 gold depo and a bone church
 [04:25] Jewel_Stone: 400 tit/ 1000 hwp / 800 bread / 500 gold dep / 500 gold dep
 
+
+** Raiding the raiders
+1000 ewl 800hwp 550 brew 1 duck 1 duck 64 coins
+
+** Victor the Vicious - Tage
+
+camp 6 is the 2 leader camps left for last/lootspots
+
+| Camp | Gen | S sent | S left | S lost | R sent | R left | R lost |                    |
+|------+-----+--------+--------+--------+--------+--------+--------+--------------------|
+|    1 | MMA |        |        |      0 |     75 |      7 |     68 |                    |
+|    2 | MMA |        |        |      0 |     34 |     29 |      5 |                    |
+|    5 | MMA |        |        |      0 |    120 |     12 |    108 | 3 and 4 blocked    |
+|    9 | VET |        |        |      0 |     60 |        |     60 | suicide 1st wave   |
+|    9 | MMA |      2 |      2 |      0 |     71 |      7 |     64 | 7 and 8 blocked    |
+|    T | NRM |    100 |    100 |      0 |      5 |        |      5 |                    |
+|   15 | VET |        |        |      0 |        |        |      0 | suicide 40C        |
+|   15 | M/V |        |        |      0 |        |        |      0 | 4M left out of 130 |
+|------+-----+--------+--------+--------+--------+--------+--------+--------------------|
+|      |     |        |        |      0 |        |        |    310 |                    |
+|------+-----+--------+--------+--------+--------+--------+--------+--------------------|
+#+TBLFM: $5=$3-$4::$8=$6-$7::@10$5=vsum(@I..II)::@10$8=vsum(@I..II)
+
 * BK - Major guide - EJML = Evil\_J Max losses 
 
 All attacks done with a MoMA - no vets or majors used. The blocks are
