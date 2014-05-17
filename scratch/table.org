@@ -48,24 +48,30 @@ on a second thought ... Pierro pizza is way too cute :)
 ** Raiding the raiders
 1000 ewl 800hwp 550 brew 1 duck 1 duck 64 coins
 
-** Victor the Vicious - Tage
+* Victor the Vicious - Tage MMA less than 50S tracking
 
 camp 6 is the 2 leader camps left for last/lootspots
 
-| Camp | Gen | S sent | S left | S lost | R sent | R left | R lost |                    |
-|------+-----+--------+--------+--------+--------+--------+--------+--------------------|
-|    1 | MMA |        |        |      0 |     75 |      7 |     68 |                    |
-|    2 | MMA |        |        |      0 |     34 |     29 |      5 |                    |
-|    5 | MMA |        |        |      0 |    120 |     12 |    108 | 3 and 4 blocked    |
-|    9 | VET |        |        |      0 |     60 |        |     60 | suicide 1st wave   |
-|    9 | MMA |      2 |      2 |      0 |     71 |      7 |     64 | 7 and 8 blocked    |
-|    T | NRM |    100 |    100 |      0 |      5 |        |      5 |                    |
-|   15 | VET |        |        |      0 |        |        |      0 | suicide 40C        |
-|   15 | M/V |        |        |      0 |        |        |      0 | 4M left out of 130 |
-|------+-----+--------+--------+--------+--------+--------+--------+--------------------|
-|      |     |        |        |      0 |        |        |    310 |                    |
-|------+-----+--------+--------+--------+--------+--------+--------+--------------------|
-#+TBLFM: $5=$3-$4::$8=$6-$7::@10$5=vsum(@I..II)::@10$8=vsum(@I..II)
+| Camp | Gen | S sent | S left | S lost | R sent | R left | R lost |                                   |
+|------+-----+--------+--------+--------+--------+--------+--------+-----------------------------------|
+|    1 | MMA |        |        |      0 |     75 |      7 |     68 |                                   |
+|    2 | MMA |        |        |      0 |     34 |     29 |      5 |                                   |
+|    5 | MMA |        |        |      0 |    120 |     12 |    108 | 3 and 4 blocked                   |
+|    9 | VET |        |        |      0 |     60 |        |     60 | suicide 1st wave                  |
+|    9 | MMA |      2 |      2 |      0 |     71 |      7 |     64 | 7 and 8 blocked                   |
+|    T | NRM |    100 |    100 |      0 |      5 |        |      5 |                                   |
+|   12 | MMA |        |        |      0 |    118 |        |    118 |                                   |
+|   15 | VET |        |        |      0 |        |        |      0 | suicide 40C                       |
+|   15 | M/V |        |        |      0 |        |        |      0 | 4M left out of 130                |
+|   19 | MMA |     20 |      0 |     20 |        |        |      0 | used some E, was out of M         |
+|   19 | VET |        |        |      0 |    125 |        |    125 | some M and E too                  |
+|    6 | MMA |        |        |      0 |    120 |      5 |    115 |                                   |
+|    6 | MMA |        |        |      0 |      1 |        |      1 | Darkie sent, snuffed all 100 dogs |
+|    6 | MMA |        |        |      0 |    120 |     36 |     84 |                                   |
+|------+-----+--------+--------+--------+--------+--------+--------+-----------------------------------|
+|      |     |        |        |     20 |        |        |    753 |                                   |
+|------+-----+--------+--------+--------+--------+--------+--------+-----------------------------------|
+#+TBLFM: $5=$3-$4::$8=$6-$7::@16$5=vsum(@I..II)::@16$8=vsum(@I..II)
 
 * BK - Major guide - EJML = Evil\_J Max losses 
 

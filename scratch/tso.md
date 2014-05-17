@@ -6,9 +6,7 @@ tags: [games, tso, evil_j]
 ---
 {% include links %}
 
-##
-
-links to guides
+## links to guides
 
 ### Bandit nest
 http://forum.thesettlersonline.com/threads/26638-Guide-corona88-adventure-guides?p=255255&viewfull=1#post255255
@@ -21,7 +19,7 @@ with loot overview at the end - http://forum.thesettlersonline.com/threads/16332
 
 - buy jolly geologists, train 1 for max copper, and science him all
 - check marlbe masons and make them 5 asap, buff them asap
-- epic workyard, place it near working buildings
+- epic workyard, place it near working buildings (this silly, misunderstood buff)
 - buy as many gempits as you like (maybe 1) and place next to the epic woodyard for testing the buff
 - make 3 fast endless copper mines (might combine it with building the guild house and the other mines, beware marble!)
 - buy a MMoA and the other gens
@@ -57,3 +55,4 @@ instead of 129K 121R - Moma with 25K 195R
 ### DP
 
 only recruits - MoMA 281R loss (one wave DC for 150R loss)
+
