@@ -1,6 +1,8 @@
 #+TITLE: MoMA experiments
 
 * untracked adv loots
+NOTE: <2014-06-08 Sun> Procat added co-ops to the lootracker -
+http://loottracking.keepers.dk/ will try adding these there.
 ** Tomb Raiders
 
 This is a *bit* rough atm, hope to tidy it up soon :)
