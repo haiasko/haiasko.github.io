@@ -1,0 +1,284 @@
+    1  sh -x c9rjsw 
+    2  gem install jekyll
+    3  sh -x c9rjsw 
+    4  gem install kramdown
+    5  sh -x c9rjsw 
+    6  sh c9rjsw 
+    7  git status
+    8  git add _posts/
+    9  git commit
+   10  git push
+   11  cd
+   12  cd temp
+   13  ls -l
+   14  wget http://www.haskell.org/ghc/dist/7.6.3/ghc-7.6.3-x86_64-unknown-linux.tar.bz2
+   15  tar xvjf ghc-7.6.3-x86_64-unknown-linux.tar.bz2 
+   16  ls -l
+   17  rm -fr ghc-7.6.3
+   18  du -h
+   19  quota
+   20  quota -h
+   21  quota -s
+   22  df -h
+   23  quota -s
+   24  cd
+   25  cd temp
+   26  ls 
+   27  du -h gmp-4.3.1
+   28  du -h gmp-4.3.1
+   29  quota -s
+   30  mount
+   31  df -h
+   32  cd /var
+   33  ls
+   34  cd tmp
+   35  ls -l
+   36  mkdir x
+   37  ls -l
+   38  rmdir x
+   39  cd
+   40  cd /var/tmp
+   41  ls
+   42  ls -l
+   43  mv ~/temp/ghc-7.6.3-x86_64-unknown-linux.tar.bz2 ~/temp/gmp-4.3.1.tar.bz2 .
+   44  quota -s
+   45  mount
+   46  ls -l
+   47  cd
+   48  ls -l
+   49  du -h temp
+   50  du -h *
+   51  du -h .
+   52  quota -s
+   53  ls -l /var/tmp
+   54  quota -s
+   55  pwd
+   56  quota -s
+   57  watch quota -s
+   58  watch quota -s
+   59  git status
+   60  cd
+   61  ls -l
+   62  ls -l lib
+   63  mkdir temp
+   64  cd temp
+   65  ls -l
+   66  wget ftp://ftp.gnu.org/gnu/gmp/gmp-4.3.1.tar.bz2
+   67  ls -l
+   68  tar xvjf gmp-4.3.1.tar.bz2 
+   69  git status
+   70  ls -l
+   71  cd gmp-4.3.1
+   72  ./configure --prefix=$HOME
+   73  make
+   74  make
+   75  make check
+   76  make install
+   77  pwd
+   78  cd
+   79  cd /var/tmp
+   80  ls -l
+   81  tar xvjf ghc-7.6.3-x86_64-unknown-linux.tar.bz2 
+   82  ls -l
+   83  rm -fr ghc-7.6.3
+   84  ls -l /tmp
+   85  ls -l /
+   86  ls -l /usr/tmp
+   87  ls -l /usr/tmp/
+   88  watch quota -s
+   89  sh c9rjsw 
+   90  sh c9rjsw 
+   91  git status
+   92  git add _posts/
+   93  git commit
+   94  git push
+   95  cd
+   96  sh c9rjsw 
+   97  c
+   98  rhc
+   99  rhc
+  100  rhc ssh
+  101  git status
+  102  git add _posts/
+  103  git commit
+  104  git push
+  105  git config --global push.default simple
+  106  rhc tail
+  107  rhc tail yesod
+  108  rhc ssh yesod
+  109  cd
+  110  ls -la
+  111  git clone ssh://535e07424382ec8603000109@yesod-haiasko.rhcloud.com/~/git/yesod.git/ yesod
+  112  cd yesod
+  113  ls -l
+  114  ls -la
+  115  ls -l .openshift/
+  116  ls -l .openshift/action_hooks/
+  117  ls -l .openshift/markers/
+  118  du -h
+  119  ls -l
+  120  git status
+  121  echo brum > test.test
+  122  ls -l
+  123  cat test.test
+  124  git status
+  125  git add test.test
+  126  git push
+  127  git commit
+  128  git push
+  129  git remote add github https://github.com/haiasko/yesod-openshift.git
+  130  git push -u github
+  131  git push -u github master
+  132  git login
+  133  ls -l
+  134  git status
+  135  git help
+  136  git help remote
+  137  git remote
+  138  git remote remove github
+  139  git remote
+  140  git remote add github git@github.com:haiasko/yesod-openshift.git
+  141  git push -u github master
+  142  rhc ssh yesod
+  143  rhc ssh yesod
+  144  rhc ssh yesod
+  145  rhc ssh yesod
+  146  cd
+  147  cd -
+  148  git status
+  149  git commit
+  150  git add _posts/
+  151  git commit
+  152  git push
+  153  cd
+  154  cd yesod
+  155  ls -l
+  156  TERM=linux emacs Main.hs 
+  157  git status
+  158  git add Main.hs
+  159  git commit
+  160  git push
+  161  git remote
+  162  git push -u origin master
+  163  git status
+  164  git add _posts/
+  165  git commit
+  166  git push
+  167  sh c9rjsw 
+  168  git status
+  169  git commit -a
+  170  git push
+  171  quota -s
+  172  git status
+  173  cd ../yesod/
+  174  git status
+  175  quota -s
+  176  TERM=linux emacs 
+  177  git status
+  178  TERM=linux emacs 
+  179  TERM=linux emacs scratch/table.org 
+  180  ps axuwww|grep emacs
+  181  TERM=linux emacs scratch/table.org 
+  182  git status
+  183  git branch bnmoma
+  184  git status
+  185  git -b bnmoma
+  186  git branch
+  187  git help brnch
+  188  git help branch
+  189  git checkout bnmoma
+  190  git status
+  191  git add scratch/bnmoma
+  192  git add scratch/table.org
+  193  git status
+  194  git commit
+  195  git push
+  196  git remote
+  197  cd
+  198  git status
+  199  cd -
+  200  git push bnmoma
+  201  git push -u origin bnmoma
+  202  git checkout master
+  203  TERM=linux emacs scratch/table.org 
+  204  git status
+  205  git add scratch/table.org
+  206  git commit
+  207  git status
+  208  git push -u origin bnmoma
+  209  ps axuwww|grep emacs
+  210  git checkout bnmoma
+  211  TERM=linux emacs scratch/table.org 
+  212  cd ../yesod/
+  213  ls
+  214  git status
+  215  git remote
+  216    
+  217  sh c9rjsw 
+  218  TERM=linux emacs scratch/table.org 
+  219  pwd
+  220  git status
+  221  date
+  222  git checkout master
+  223  TERM=linux emacs scratch/table.org 
+  224  TERM=linux emacs scratch/table.org 
+  225  TERM=linux emacs scratch/table.org 
+  226  git status
+  227  sh c9rjsw 
+  228  git status
+  229  git add scratch/
+  230  git commit
+  231  git push
+  232  git status
+  233  jekyll --help
+  234  man jekyll
+  235  git status
+  236  ls -l c9
+  237  ls -l *c9
+  238  ls -l .c9/
+  239  vi .gitignore 
+  240  git status
+  241  git add .gitignore 
+  242  git status
+  243  git commit
+  244  git push
+  245  git pull
+  246  git status
+  247  git push
+  248  git status
+  249  type rake
+  250  ls
+  251  cat c9rjsw 
+  252  sh c9rjsw
+  253  jekyll
+  254  sudo apt-get install ruby ruby-dev make gcc nodejs
+  255  jekyll -v
+  256  sudo gem install jekyll
+  257  jekyl -v
+  258  jekyll -v
+  259  jekyll serve
+  260  ls -l serve
+  261  git status
+  262  rm -fr serve
+  263  git status
+  264  man jekyll
+  265  ls
+  266  pwd
+  267  ls -l
+  268  sh c9rjsw
+  269  sudo gem install github-pages
+  270  sh c9rjsw
+  271  jekyll -v
+  272  sh c9rjsw
+  273  cat c9rj
+  274  jekyll -v
+  275  hash -r
+  276  type jekyll
+  277  jekyll -v
+  278  sudo gem install jekyll 
+  279  jekyll -v
+  280  ls
+  281  git status
+  282  git log
+  283  history|less
+  284  history > history.txt
