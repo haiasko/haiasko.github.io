@@ -8,9 +8,13 @@ tags: [code]
 ### Short term
 
 - vim
+	- short tutorial passed
+	- windows and buffers - urgent
+	- user manual
+- github pages
+	- get rid of bootstrap and use themes
 - kramdown
 - jekyll
-- github pages
 
 ### Long term
 - django
