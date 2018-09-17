@@ -1,0 +1,1000 @@
+ 1032  ccmake ..
+ 1033  make install
+ 1034  ldd bin/libxmrstak_opencl_backend.so 
+ 1035  cd bin/
+ 1036  ./xmr-stak 
+ 1037  clinfo
+ 1038  ldd /usr/lib/libOpenCL.so
+ 1039  ldd libxmrstak_opencl_backend.so 
+ 1040  ls -l /opt/AMDAPPSDK-3.0/lib/x86_64/sdk/
+ 1041  ls -l /usr/lib/libamdocl*
+ 1042  ldd `which clinfo`
+ 1043  pwd
+ 1044  cd ..
+ 1045  ccmake ..
+ 1046  make clean
+ 1047  make install
+ 1048  cd bin
+ 1049  ls
+ 1050  ldd libxmrstak_opencl_backend.so 
+ 1051  less config.txt 
+ 1052  ls config.txt 
+ 1053  less config.txt 
+ 1054  ./xmr-stak 
+ 1055  less config.txt 
+ 1056  cd ../../..
+ 1057  ls -l /opt/AMDAPPSDK-3.0/lib/x86_64/libOpenCL.so 
+ 1058  ls -lL /opt/AMDAPPSDK-3.0/lib/x86_64/libOpenCL.so 
+ 1059  cd xmr3/
+ 1060  ls -l
+ 1061  ls -la
+ 1062  pwd
+ 1063  cd build
+ 1064  ccmake ..
+ 1065  cd ../..
+ 1066  mkdir xmr4
+ 1067  cd xmr4
+ 1068  git clone https://github.com/fireice-uk/xmr-stak .
+ 1069  la
+ 1070  mkdir build
+ 1071  cd build
+ 1072  cmake -DCUDA_ENABLE=OFF ..
+ 1073  ccmake ..
+ 1074  ls -l /opt/AMDAPPSDK-3.0/lib/x86_64/libOpenCL.so 
+ 1075  make install
+ 1076  cd bin/
+ 1077  ldd libxmrstak_opencl_backend.so 
+ 1078  type emacs
+ 1079  xemacs
+ 1080  emacs
+ 1081  ./xmr-stak 
+ 1082  cd /opt/AMDAPPSDK-3.0/
+ 1083  find . -name libOpenCL*
+ 1084  set|grep AMD
+ 1085  cd -
+ 1086  LD_PRELOAD=~/amd/tmp/opt/amdgpu-pro/lib/x86_64-linux-gnu/libOpenCL.so ./xmr-stak 
+ 1087  less config.txt 
+ 1088  cd ..
+ 1089  ccmake ..
+ 1090  make clean install
+ 1091  cd bin
+ 1092  ls
+ 1093  rm config.txt 
+ 1094  rm cpu.txt 
+ 1095  ls
+ 1096  ldd libxmrstak_opencl_backend.so 
+ 1097  ./xmr-stak 
+ 1098  cd ..
+ 1099  git status
+ 1100  git log|less
+ 1101  set|grep AMD
+ 1102  ldd build/bin/libxmrstak_opencl_backend.so 
+ 1103  cmake -DCUDA_ENABLE=OFF ..
+ 1104  less build/bin/config.txt 
+ 1105  cd
+ 1106  less xmr-stak/bin/config.txt
+ 1107  cd xmr5/build/bin/
+ 1108  ls
+ 1109  ls -l
+ 1110  rm myamd.txt 
+ 1111  vi amd.txt
+ 1112  vi cpu.txt 
+ 1113  vi amd.txt
+ 1114  pwd
+ 1115  cd
+ 1116  emacs
+ 1117  fg
+ 1118  top
+ 1119  killall nm-applet
+ 1120  top
+ 1121  screen -RD
+ 1122  xmonad --replace&
+ 1123  indicator-kdeconnect&
+ 1124  jobs
+ 1125  kill %2
+ 1126  top
+ 1127  jobs
+ 1128  top
+ 1129  ./runeth 
+ 1130  set|grep AMD
+ 1131  cd xmr5/build/bin/
+ 1132  ./run 
+ 1133  stty sane
+ 1134  ./xmr-stak 
+ 1135  stty sanecstty sane
+ 1136  stty sane
+ 1137  ls -l /opt/amdgpu-pro
+ 1138  cat run
+ 1139  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ strace xmr-stak 
+ 1140  man strace
+ 1141  strace xmr-stak 
+ 1142  ldd xmr-stak 
+ 1143  strace `which ls`
+ 1144  ls -l xmr-stak 
+ 1145  strace xmr-stak 
+ 1146  strace ethminer 
+ 1147  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ strace ethminer 
+ 1148  cd
+ 1149  . chkdrv 
+ 1150  top
+ 1151  ifconfig 
+ 1152  ./runeth 
+ 1153  set|grep AMD
+ 1154  ./runeth 
+ 1155  ethminer -G
+ 1156  xmonad --replace&
+ 1157  ./runeth 
+ 1158  cd
+ 1159  ./runeth 
+ 1160  cat runeth
+ 1161  vi runeth
+ 1162  ./runeth 
+ 1163  ls -l eth(
+ 1164  pwd
+ 1165  ls -l 
+ 1166  ls -l e*
+ 1167  ./runeth 
+ 1168  sudo su
+ 1169  ifconfig 
+ 1170  ./runeth 
+ 1171  tar xvzf Downloads/ethminer-0.14.0.dev2-Linux.tar.gz 
+ 1172  cd bin
+ 1173  ls
+ 1174  cat ../runeth
+ 1175  ../runeth 
+ 1176  emacs
+ 1177  cd bin/
+ 1178  ../runeth 
+ 1179  cat ..
+ 1180  cat ../runeth
+ 1181  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./ethminer --list-devices
+ 1182  vi ../run
+ 1183  vi ../runeth
+ 1184  ../runeth 
+ 1185  cat ../runeth
+ 1186  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./ethminer --farm-recheck 200 -G -S eu1.ethermine.org:4444 -FS us1.ethermine.org:4444 -O 0xFcbeE3D689bb665aE21Ec4fd72e29bb61FcBAfe5.masklinamd
+ 1187  vi ../runeth 
+ 1188  ../runeth 
+ 1189  vi ../runeth 
+ 1190  ../runeth 
+ 1191  screen -RD
+ 1192  xmonad --replace&
+ 1193  indicator-kdeconnect&
+ 1194  screen -RD
+ 1195  xmonad --replace&
+ 1196  indicator-kdeconnect&
+ 1197  cd bfgminer-5.5.0/
+ 1198  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./bfgminer -S opencl:auto
+ 1199  sudo su
+ 1200  screen -RD
+ 1201  xmonad --replace&
+ 1202  indicator-kdeconnect&
+ 1203  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./bfgminer -S opencl:auto
+ 1204  cd bfgminer-5.5.0/
+ 1205  . ../chkdrv 
+ 1206  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./bfgminer -S opencl:auto
+ 1207  top
+ 1208  sudo su
+ 1209  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./bfgminer -S opencl:auto
+ 1210  sensors
+ 1211  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./bfgminer -S opencl:auto
+ 1212  top
+ 1213  to
+ 1214  top
+ 1215  killall mate-cpufreq-applet 
+ 1216  top
+ 1217  ifconfig 
+ 1218  ping 8.8.8.8
+ 1219  screen -RD
+ 1220  xmonad --replace&
+ 1221  indicator-kdeconnect&
+ 1222  screen -RD
+ 1223  xmonad --replace&
+ 1224  indicator-kdeconnect&
+ 1225  cd bfgminer-5.5.0/
+ 1226  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./bfgminer -S opencl:auto
+ 1227  man bfgminer 
+ 1228  cd
+ 1229  top
+ 1230  ssh plamen@192.168.43.116
+ 1231  ioncuran
+ 1232  kill $$
+ 1233  kill $PID
+ 1234  ssh plamen@192.168.43.116
+ 1235  screen -RD
+ 1236  top
+ 1237  pwd
+ 1238  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./bfgminer -S opencl:auto
+ 1239  top
+ 1240  sensors
+ 1241  xmonad --replace&
+ 1242  indicator-kdeconnect&
+ 1243  cd bfgminer-5.5.0/
+ 1244  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./bfgminer -S opencl:auto
+ 1245  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./bfgminer -S opencl:auto --intesity 9 -w 512
+ 1246  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./bfgminer -S opencl:auto --intensity 9 -w 512
+ 1247  multiminer
+ 1248  apt search multiminer
+ 1249  apt search multi-miner
+ 1250  apt search mono-complete
+ 1251  sudo su
+ 1252  cd ../mm
+ 1253  mono --arch=32 MultiMiner.Win.exe
+ 1254  mono  MultiMiner.Win.exe
+ 1255  bg
+ 1256  cd ../bfgminer-5.5.0/
+ 1257  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ ./bfgminer -S opencl:auto 
+ 1258  ps axuwww|grep bfg
+ 1259  cd
+ 1260  bfgminer 
+ 1261  cd mm/
+ 1262  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ mono MultiMiner.Win.exe 
+ 1263  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ mono MultiMiner.Win.exe &
+ 1264  ifconfig 
+ 1265  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ mono MultiMiner.Win.exe &
+ 1266  type rxvt
+ 1267  rxvt
+ 1268  sudo apt-get install rxvt
+ 1269  ssh plamen@192.168.43.117
+ 1270  ssh plamen@192.168.43.116
+ 1271  ssh plamen@192.168.43.117
+ 1272  jobs
+ 1273  ssh plamen@192.168.43.116
+ 1274  date
+ 1275  screen -RD
+ 1276  cat /proc/cmdline 
+ 1277  cd xmr5/build/bin/
+ 1278  ls run
+ 1279  ./run 
+ 1280  ./run
+ 1281  ./run 
+ 1282  ./run
+ 1283  ./run 
+ 1284  ./run
+ 1285  ls run(
+ 1286  ls run*
+ 1287  chmod u+x run1
+ 1288  run1
+ 1289  ./run1
+ 1290  .cat run1
+ 1291  cat run1
+ 1292  ./run1
+ 1293  ./run1 
+ 1294  sensors
+ 1295  ./run1 
+ 1296  ./run
+ 1297  cd ~
+ 1298  unzip -t Downloads/MultiMiner-4.2.3.zip 
+ 1299  mkdir mm
+ 1300  cd mm
+ 1301  unzip -t ~/Downloads/MultiMiner-4.2.3.zip 
+ 1302  ls -l
+ 1303  unzip ~/Downloads/MultiMiner-4.2.3.zip 
+ 1304  ls -l
+ 1305  cd ../bfgminer-5.5.0/
+ 1306  ls -lt
+ 1307  d -
+ 1308  cd -
+ 1309  cd ../xr  C-c C-c
+ 1310  cd ../xmr5/build/bin/
+ 1311  ./run1 
+ 1312  dirs
+ 1313  ./run1 
+ 1314  cd ~/mm/
+ 1315  ls
+ 1316  cd   -
+ 1317  ./run1 
+ 1318  top
+ 1319  ps axuw|grep xmr
+ 1320  ssh plamen@192.168.43.116
+ 1321  ssh plamen@192.168.43.117
+ 1322  ssh plamen@192.168.43.116
+ 1323  ssh plamen@192.168.43.117
+ 1324  ssh plamen@192.168.43.118
+ 1325  ssh plamen@192.168.43.116
+ 1326  ssh plamen@192.168.43.117
+ 1327  ssh plamen@192.168.43.118
+ 1328  ssh plamen@192.168.43.117
+ 1329  ssh plamen@192.168.43.116
+ 1330  ssh plamen@192.168.43.117
+ 1331  ssh plamen@192.168.43.116
+ 1332  ssh plamen@192.168.43.117
+ 1333  top
+ 1334  ssh plamen@192.168.43.117
+ 1335  ssh plamen@192.168.43.116
+ 1336  ssh plamen@192.168.43.117
+ 1337  ssh plamen@192.168.43.1174
+ 1338  ssh plamen@192.168.43.117
+ 1339  ssh plamen@192.168.43.116
+ 1340  ssh plamen@192.168.43.117
+ 1341  ssh plamen@192.168.43.116
+ 1342  ssh plamen@192.168.43.117
+ 1343  ssh plamen@192.168.43.116
+ 1344  screen --version
+ 1345  jobs
+ 1346  cd
+ 1347  sudo apt-get install screen
+ 1348  sudo apt-get update
+ 1349  tar tvzf Downloads/tsetup.1.2.6.tar.xz 
+ 1350  tar tvJf Downloads/tsetup.1.2.6.tar.xz 
+ 1351  tar xvJf Downloads/tsetup.1.2.6.tar.xz 
+ 1352  cd Telegram/
+ 1353  ./Telegram 
+ 1354  bg
+ 1355  ldd Telegram 
+ 1356  ./Telegram 
+ 1357  cd mm
+ 1358  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ mono MultiMiner.Win.exe &
+ 1359  cd ../xmr5/build/bin/
+ 1360  ./run1 
+ 1361  cd -
+ 1362  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ mono MultiMiner.Win.exe &
+ 1363  cd ../xmr5/build/bin/
+ 1364  ./run1
+ 1365  CD -
+ 1366  cd -
+ 1367  LD_LIBRARY_PATH=/opt/amdgpu-pro/lib/x86_64-linux-gnu/ mono MultiMiner.Win.exe &
+ 1368  cd -
+ 1369  jobs
+ 1370  ./run1
+ 1371  pkg-config 
+ 1372  pkg_info
+ 1373  pkg-info
+ 1374  ./run1 
+ 1375  |  0 |   (na) |   15.9 |   16.5 |
+ 1376  ---------------------------
+ 1377  Totals:     (na)   23.5   24.1 H/s
+ 1378  Highest:     0.0 H/s
+ 1379  ./run1 
+ 1380  ifconfig 
+ 1381  ping 8.8.8.8
+ 1382  ps axuwwww|grep yand
+ 1383  killall yandex_browser
+ 1384  screen -RD
+ 1385  xmonad --replace&
+ 1386  indicator-kdeconnect&
+ 1387  ssh plamen@192.168.43.116
+ 1388  ssh plamen@192.168.43.117
+ 1389  ssh plamen@192.168.43.116
+ 1390  emacs
+ 1391  screen -RD
+ 1392  screen -RD
+ 1393  charmap 
+ 1394  obs
+ 1395  jobs
+ 1396  xmonad --replace&
+ 1397  indicator-kdeconnect&
+ 1398  scp plamen@192.168.43.117:Downloads/*mp4 Downloads/
+ 1399  ls -l Downloads/t_video5791843628645089690.mp4 
+ 1400  ssh plamen@192.168.43.116
+ 1401  ssh plamen@192.168.43.117
+ 1402  ssh plamen@192.168.43.116
+ 1403  ssh plamen@192.168.43.117
+ 1404  ssh plamen@192.168.43.116
+ 1405  ssh plamen@192.168.43.117
+ 1406  ssh plamen@192.168.43.116
+ 1407  ssh plamen@192.168.43.118
+ 1408  ssh plamen@192.168.43.116
+ 1409  ssh plamen@192.168.43.117
+ 1410  echo $TERM
+ 1411  tput reset
+ 1412  ssh plamen@192.168.43.117
+ 1413  ssh plamen@192.168.43.116
+ 1414  vi MungHo.txt
+ 1415  nmcli connect plamen
+ 1416  ifconfig 
+ 1417  sudo su
+ 1418  ssh plamen@192.168.43.116
+ 1419  ifconfig 
+ 1420  ifconfig \
+ 1421  ifconfig 
+ 1422  ifconfig wlp1s0 ssid plamen
+ 1423  man ifconfig 
+ 1424  man wish
+ 1425  xev 
+ 1426  top
+ 1427  mtr 8.8.8.8
+ 1428  ssh plamen@192.168.43.116
+ 1429  ssh plamen@192.168.43.117
+ 1430  man xrandr
+ 1431  xrandr --auto
+ 1432  killall yandex_browser
+ 1433  ifconfig 
+ 1434  uptime 
+ 1435  ifconfig 
+ 1436  sudo su
+ 1437  nm-online 
+ 1438  ifconfig 
+ 1439  nm-applet 
+ 1440  bg
+ 1441  vi jamin.txt 
+ 1442  vi jamin2.txt
+ 1443  locate ACIM
+ 1444  locate -i ACIM|less
+ 1445  less jamin*
+ 1446  vi jamin3.txt
+ 1447  top
+ 1448  ifconfig 
+ 1449  mtr en12.forgeofempires.com
+ 1450  host en12.forgeofempires.com
+ 1451  ifconfig 
+ 1452  mtr 2a00:1f78:fffd:10::d435:a149
+ 1453  netstat -rn
+ 1454  uptime 
+ 1455  cat /etc/lsb-release 
+ 1456  uname -a
+ 1457  xrandr 
+ 1458  killall yandex_browser
+ 1459  top
+ 1460  killall nm-applet
+ 1461  top
+ 1462  ps axuww|grep monad
+ 1463  xmonad --replace&
+ 1464  indicator-kdeconnect&
+ 1465  top
+ 1466  kill 2014
+ 1467  top
+ 1468  killall yandex_browser
+ 1469  top
+ 1470  ls monero
+ 1471  less monero.txt 
+ 1472  top
+ 1473  killall yandex_browser
+ 1474  ping 8.8.8.i
+ 1475  ping 8.8.8.8
+ 1476  mtr 8.8.8.8
+ 1477  ping 8.8.8.8
+ 1478  ifconfig 
+ 1479  ps axuwww|grep moner
+ 1480  ifconfig 
+ 1481  ps axuwww|grep monerod
+ 1482  ifconfig 
+ 1483  ps axuwww|grep monerod
+ 1484  killall monerod
+ 1485  killall -9 monerod
+ 1486  killall monerod
+ 1487  ps axuwww|grep monerod
+ 1488  ifconfig 
+ 1489  ls monero-gui-v0.11.1.0/
+ 1490  cd monero-gui-v0.11.1.0/
+ 1491  ls -l ~/.bitmonero/
+ 1492  ls -l ~/.bitmonero/export/
+ 1493  pwd
+ 1494  cd ../.bitmonero/
+ 1495  pwd
+ 1496  ls
+ 1497  ls -l export/
+ 1498  cd ../monero-gui-v0.11.1.0/
+ 1499  ls -lt
+ 1500  less monero-blockchain-import
+ 1501  less monero-blockchain-import.log 
+ 1502  ./monero-blockchain-import --help
+ 1503  ./monero-blockchain-import --help|less
+ 1504  ldd ./monero-blockchain-import --help|less
+ 1505  ls -lt *log
+ 1506  less monero-wallet-gui.log 
+ 1507  ifconfig 
+ 1508  top
+ 1509  ps axuww|grep monad
+ 1510  xmonad --replace&
+ 1511  indicator-kdeconnect&
+ 1512  top
+ 1513  kill 2014
+ 1514  top
+ 1515  killall yandex_browser
+ 1516  top
+ 1517  screen -RD
+ 1518  cd monero-gui-v0.11.1.0/
+ 1519  ./start-gui.sh 
+ 1520  bg
+ 1521  ./monerod 
+ 1522  ping 8.8.8.8
+ 1523  jobs
+ 1524  ps axuwww|grep monero
+ 1525  ./monerod 
+ 1526  fg
+ 1527  ./monerod 
+ 1528  ldd monerod
+ 1529  ls
+ 1530  du -h
+ 1531  ls -l
+ 1532  ./monero-blockchain-import 
+ 1533  ls -l ~/Downloads/monero-gui-linux-x64-v0.11.1.0.tar.bz2 
+ 1534  uname -a
+ 1535  ls
+ 1536  ldd monerod
+ 1537  find . -iname *blockchain*
+ 1538  find . -iname "*blockchain*"
+ 1539  ls -l ~/.bitmonero/
+ 1540  ls -l ~/.bitmonero/lmdb/
+ 1541  cd
+ 1542  cd Downloads/
+ 1543  wget http://downloads.getmonero.org/linux64
+ 1544  mv linux64  monero-linux-x64-v0.11.1.0.tar.bz2
+ 1545  wget http://downloads.getmonero.org/blockchain/linux/blockchain.bin 
+ 1546  ls -l ../monero
+ 1547  ls -l
+ 1548  ls -l *xz
+ 1549  ls -l *bz
+ 1550  cd 
+ 1551  pwd
+ 1552  history -l|less
+ 1553  history|less
+ 1554  ls -lt Downloads/|less
+ 1555  wget http://downloads.getmonero.org/linux64
+ 1556  ls -lt|less
+ 1557  ls -l linux64 
+ 1558  date
+ 1559  file linux64 
+ 1560  ls -l linux64 
+ 1561  tar tvZf linux64
+ 1562  tar tvJf linux64
+ 1563  tar tvjf linux64
+ 1564  ls -l monero-gui-v0.11.1.0/
+ 1565  cd monero-gui-v0.11.1.0/
+ 1566  less monero-blockchain-import
+ 1567  ls -l
+ 1568  ./monero-blockchain-export 
+ 1569  ls -l ~/.bitmonero/
+ 1570  ls -l ~/.bitmonero/export/
+ 1571  less ~/.bitmonero/bitmonero.log 
+ 1572  ps axuwww|grep monero
+ 1573  pwd
+ 1574  ./start-gui.sh 
+ 1575  ls -l ~/.bitmonero/export/
+ 1576  ls -l ~/.bitmonero/
+ 1577  ls -l ~/.bitmonero/lmdb/
+ 1578  ./monero-blockchain-import 
+ 1579  ./start-gui.sh 
+ 1580  ps axuwww|grep monero
+ 1581  ./start-gui.sh 
+ 1582  bg
+ 1583  ls
+ 1584  ls -l *log
+ 1585  ls -l libs/
+ 1586  ps axuw|grep monero
+ 1587  killall monerod
+ 1588  ps axuw|grep monero
+ 1589  sudo su
+ 1590  cd monero-gui-v0.11.1.0/
+ 1591  ./monero
+ 1592  \
+ 1593  cd ~/xmr5/build/bin/
+ 1594  . run1
+ 1595  ls -l ~/Downloads/
+ 1596  ./run1 
+ 1597  ps axuwww|grep yand
+ 1598  cat ./run1 
+ 1599  ./run1
+ 1600  ./run1 
+ 1601  ./run1
+ 1602  xmonad --replace&
+ 1603  indicator-kdeconnect&
+ 1604  vi jamin4.txt
+ 1605  ls -lt|less
+ 1606  ls -l kdeconnect/
+ 1607  less kdeconnect/log.txt 
+ 1608  vi jamin5.txt
+ 1609  less kdeconnect/log.txt 
+ 1610  ssh plamen@192.168.43.116
+ 1611  lunes 9:30 Paloma
+ 1612  tput reset
+ 1613  lunes 9:30 Paloma
+ 1614  top
+ 1615  PALOMA JUEVES 12:30
+ 1616  ssh plamen@192.168.43.116
+ 1617  indicator-kdeconnect&
+ 1618  xmonad --replace&
+ 1619  jobs
+ 1620  top
+ 1621  xmonad --replace&
+ 1622  indicator-kdeconnect&
+ 1623  less kdeconnect/log.txt 
+ 1624  xmonad --replace&
+ 1625  indicator-kdeconnect&
+ 1626  xmonad --replace&
+ 1627  lscpu |grep temp
+ 1628  lscpu
+ 1629  lsb_release 
+ 1630  francair
+ 1631  transair
+ 1632  5.78
+ 1633  via complutense 117a
+ 1634  ate.curso-online.net
+ 1635  nie nie
+ 1636  de 3 5:30
+ 1637  mtr 8.8.8.8
+ 1638  ps axuwww|grep indic
+ 1639  indicator-kdeconnect&
+ 1640  locate proton
+ 1641  less Downloads/protonmail_recovery_codes.txt 
+ 1642  locate -i proton
+ 1643  ps axuwww|grep slim
+ 1644  apt-get search android
+ 1645  apt search android
+ 1646  xmonad --replace&
+ 1647  ps axuwww|grep mate
+ 1648  ps axuwww|grep marco
+ 1649  ps axuwww|grep mar
+ 1650  top
+ 1651  lscpu |grep temp
+ 1652  lspci |grep temp
+ 1653  cpufreq-info 
+ 1654  find /proc/ -iname *temp*
+ 1655  sudo su
+ 1656  sensors
+ 1657  ps axuwww|grep team
+ 1658  indicator-kdeconnect&
+ 1659  xmonad --replace&
+ 1660  sensors
+ 1661  top
+ 1662  sensors
+ 1663  top
+ 1664  sensors
+ 1665  top
+ 1666  sensors
+ 1667  sudo su
+ 1668  mate-cpufreq-selector 
+ 1669  man mate-cpufreq-selector 
+ 1670  sensors
+ 1671  xmonad --replace&
+ 1672  ps axuw|grep marco
+ 1673  top
+ 1674  cpufreq-info 
+ 1675  gpu-manager 
+ 1676  amd
+ 1677  sudo su
+ 1678  ps axuwww|grep apt
+ 1679  kill 3782
+ 1680  sudo su
+ 1681  xmonad --replace&
+ 1682  locate -i asus
+ 1683  locate -i X00
+ 1684  locate -i X008
+ 1685  locate -i X008D
+ 1686  locate -i X008D*pdf
+ 1687  locate -i asus*pdf
+ 1688  emacs
+ 1689  xmonad --replace&
+ 1690  ps axuw|grep marco
+ 1691  ping 8.8.8.8
+ 1692  ifconfig 
+ 1693  ping 8.8.8.8
+ 1694  xmonad --replace&
+ 1695  top
+ 1696  xmonad --replace&
+ 1697  sensors
+ 1698  xmonad --replace&
+ 1699  sensors
+ 1700  indicator-kdeconnect&
+ 1701  xmonad --replace&
+ 1702  sudo su
+ 1703  xmonad --replace&
+ 1704  ps axuwww|grep skyp
+ 1705  ps axuwww|grep team
+ 1706  sudo su
+ 1707  sensors
+ 1708  xmonad --replace&
+ 1709  indicator-kdeconnect&
+ 1710  xmonad --replace&
+ 1711  indicator-kdeconnect&
+ 1712  xmonad --replace&
+ 1713  sensors
+ 1714  xmonad --replace&
+ 1715  sensors
+ 1716  xmonad --replace&
+ 1717  sensors
+ 1718  xmonad --replace&
+ 1719  indicator-kdeconnect&
+ 1720  xmonad --replace&
+ 1721  indicator-kdeconnect&
+ 1722  xmonad --replace&
+ 1723  indicator-kdeconnect&
+ 1724  sensors
+ 1725  locate -i acim
+ 1726  locate -i acim*pdf
+ 1727  locate -i acim|less
+ 1728  ls -l 64GSIM/Download/Course\ in\ Miracles_\ Combined\ Volume\ 3e\,\ A\ -\ Helen\ Schucman.pdf 
+ 1729  locate -i atlanta
+ 1730  top
+ 1731  sensors
+ 1732  xmonad --replace&
+ 1733  ps axuwww|grep marco
+ 1734  xmonad --replace&
+ 1735  ps axuwww|grep xm
+ 1736  locate -i nadia
+ 1737  locate -i dni
+ 1738  ls -l Documents/
+ 1739  sensors
+ 1740  ps axuwww|grep indic
+ 1741  top
+ 1742  anticipa
+ 1743  jose antonio
+ 1744  160923,52
+ 1745  sensors
+ 1746  top
+ 1747  sensors
+ 1748  xkbset
+ 1749  sudo apt install xkbset
+ 1750  man xkbset
+ 1751  top
+ 1752  ps axuwww|grep indic
+ 1753  top
+ 1754  killall yandex_browser
+ 1755  top
+ 1756  6 miercoles torrejon 11:30
+ 1757  fronteras
+ 1758  asesoria juridica 910714527 laura galvez
+ 1759  top
+ 1760  java --version
+ 1761  java -version
+ 1762  top
+ 1763  less kdeconnect/log.txt 
+ 1764  cd 
+ 1765  less kdeconnect/log.txt 
+ 1766  top
+ 1767  killall Telegram
+ 1768  top
+ 1769  df -h
+ 1770  sensors
+ 1771  mtr 8.8.8.8
+ 1772  mtr -n 8.8.8.8
+ 1773  ifconfig 
+ 1774  mtr -n 8.8.8.8
+ 1775  mtr 8.8.8.8
+ 1776  ping 8.8.8.88
+ 1777  ping 8.8.8.8
+ 1778  apn llamayainternet moreinternet
+ 1779  ping 8.8.8.8
+ 1780  698351647
+ 1781  mtr 8.8.8.8
+ 1782  698351647
+ 1783  sudo sy
+ 1784  sudo su
+ 1785  ping 8.8.8.8
+ 1786  ifconfig 
+ 1787  mtr 8.8.8.8
+ 1788  ps axuwww|grep mar
+ 1789  sensors
+ 1790  man watch
+ 1791  watch -n 5 sensors
+ 1792  sensors
+ 1793  vi remar.tx
+ 1794  sensors
+ 1795  ps axuww|grep team
+ 1796  killall teamviewerd
+ 1797  sudo su
+ 1798  sensors
+ 1799  sudo su
+ 1800  top
+ 1801  ps axuwww|grep marco
+ 1802  vi gizmo
+ 1803  mtr 8.8.8.8
+ 1804  top
+ 1805  ifconfig 
+ 1806  netstat -rn
+ 1807  ifconfig 
+ 1808  netstat -rn
+ 1809  ifconfig 
+ 1810  top
+ 1811  vi martial.txt
+ 1812  vi guild
+ 1813  vi msg
+ 1814  vi dinge
+ 1815  sensors
+ 1816  watch sensors
+ 1817  ps axuww
+ 1818  ps axuww|grep marco
+ 1819  watch sensors
+ 1820  vi sharph
+ 1821  less kdeconnect/log.txt 
+ 1822  698351647
+ 1823  vi dinky
+ 1824  sudo su
+ 1825  vi cris
+ 1826  less /var/log/syslog
+ 1827  vi ferocious
+ 1828  less kdeconnect/log.txt 
+ 1829  ifconfig 
+ 1830  less kdeconnect/log.txt 
+ 1831  vi ticket
+ 1832  vi TG
+ 1833  top
+ 1834  less kdeconnect/log.txt 
+ 1835  vi hagi
+ 1836  sensors
+ 1837  ps axuwww|grep yandex
+ 1838  less kdeconnect/log.txt 
+ 1839  mtr 8.8.8.8
+ 1840  top
+ 1841  killall Telegram
+ 1842  top
+ 1843  ps axuwww|grep kind
+ 1844  ps axuwww|grep indica
+ 1845  kill 3287
+ 1846  стаята на Джовани
+ 1847  стаята на Джовани - chaturbate.com
+ 1848  echo стаята на Джовани - chaturbate.com > chaturbate
+ 1849  less kdeconnect/log.txt 
+ 1850  vi elfinraer
+ 1851  vi ultraviolet
+ 1852  less kdeconnect/log.txt 
+ 1853  top
+ 1854  xrandr 
+ 1855  less kdeconnect/log.txt 
+ 1856  vi TA
+ 1857  ps axuwww|grep yan
+ 1858  ps axuwww|grep sky
+ 1859  top
+ 1860  vi NTH
+ 1861  vi Nevis
+ 1862  less kdeconnect/log.txt 
+ 1863  vi meis
+ 1864  ls *key*
+ 1865  ls
+ 1866  ls nff
+ 1867  ls nff/firefox/
+ 1868  ls DVR/
+ 1869  ls gsc
+ 1870  ls mm
+ 1871  ls monero
+ 1872  less monero.txt 
+ 1873  locate proton
+ 1874  less Downloads/protonmail_recovery_codes.txt 
+ 1875  vi Sharp
+ 1876  vi martial1 
+ 1877  vi meis 
+ 1878  grep PME *
+ 1879  vi Thekla
+ 1880  vi bobstaf
+ 1881  top
+ 1882  ifconfig
+ 1883  netstat -rn
+ 1884  ping 172.26.101.125
+ 1885  mtr 8.8.8.8
+ 1886  mtr -n 8.8.8.8
+ 1887  mtr  172.26.0.1
+ 1888  ping 172.26.0.1
+ 1889  vi dinky
+ 1890  vi -r dinky
+ 1891  man nice
+ 1892  top
+ 1893  nice -n vlc
+ 1894  man nice
+ 1895  nice -n 10 vlc
+ 1896  IFCONFIG
+ 1897  ifconfig
+ 1898  tcmpdump -n wlpls0
+ 1899  tcpdump -n wlpls0
+ 1900  sudo su
+ 1901  ps axuwww"grep thermald
+ 1902  ps axuwww|grep thermald
+ 1903  locate thermald
+ 1904  man schedutil
+ 1905  df -h
+ 1906  python --version
+ 1907  python -m django --version
+ 1908  man apt-get
+ 1909  sudo su
+ 1910  top
+ 1911  masmovil emacs
+ 1912  emacs
+ 1913  vi xxx
+ 1914  man vi
+ 1915  vim
+ 1916  vi xxx
+ 1917  sudo apt-get install vim
+ 1918  vim
+ 1919  vimtutor 
+ 1920  vi
+ 1921  vimtutor
+ 1922  pwd
+ 1923  cd ..
+ 1924  . dj2.1.1/bin/activate
+ 1925  cd djtut/
+ 1926  ls
+ 1927  git status
+ 1928  git pull
+ 1929  git status
+ 1930  Susaeta, 18 6 menos 20 entrevista
+ 1931  ls
+ 1932  mtr 8.8.8.8
+ 1933  ifconfig 
+ 1934  netstat -rn
+ 1935  ping 192.168.43.1
+ 1936  ping 8.8.8.8
+ 1937  ping 192.168.43.1
+ 1938  mtr 8.8.8.8
+ 1939  man virtualenv
+ 1940  virtualenv -p `which python3` dj2.1.1
+ 1941  ls dj2.1.1/
+ 1942  . dj2.1.1/bin/activate
+ 1943  python --version
+ 1944  pip --version
+ 1945  type pip
+ 1946  pip install django
+ 1947  python -mdjango --version
+ 1948  type django-admin
+ 1949  python --version
+ 1950  unzip -t Downloads/django-docs-2.1-en.zip 
+ 1951  unzip -t Downloads/django-docs-2.1-en.zip |less
+ 1952  mkdir dj211docs
+ 1953  cd dj211docs/
+ 1954  unzip ../Downloads/django-docs-2.1-en.zip |less
+ 1955  ls
+ 1956  python -m Django --version
+ 1957  cd ..
+ 1958  type python
+ 1959  pip install Django==2.1.1
+ 1960  python -m Django --version
+ 1961  python -m django --version
+ 1962  vimtutor 
+ 1963  fg
+ 1964  locate  vimrc_example.vim
+ 1965  fg
+ 1966  vimtutor 
+ 1967  pwd
+ 1968  git help clone
+ 1969  git clone https://github.com/plamencurso/djtut.git
+ 1970  ls djtut/
+ 1971  rm -fr djtut/
+ 1972  git clone https://github.com/haiasko/djtut.git
+ 1973  ls -l djtut/
+ 1974  ls -l djtut/mysite/
+ 1975  ls -l djtut/mysite/polls/
+ 1976  cd djtut/
+ 1977  ls
+ 1978  git status
+ 1979  git log
+ 1980  ls
+ 1981  less kdeconnect/log.txt 
+ 1982  less ~/kdeconnect/log.txt 
+ 1983  uname -a
+ 1984  python --version
+ 1985  python3 --version
+ 1986  sudo su
+ 1987  echo $EDITOR
+ 1988  echo $PATH
+ 1989  less ~/.profile
+ 1990  echo $PATH
+ 1991  type bundle
+ 1992  echo $EDITOR
+ 1993  less ~/.profile
+ 1994  echo $PATH
+ 1995  echo $EDITOR
+ 1996  less ~/.bashrc
+ 1997  echo $EDITOR
+ 1998  export EDITOR
+ 1999  less ~/.bashrc
+ 2000  type gem
+ 2001  type bundle
+ 2002  ls Gemfile 
+ 2003  cat Gemfile 
+ 2004  vi Gemfile 
+ 2005  ls
+ 2006  ls Gemfile 
+ 2007  vi G
+ 2008  vi Gemfile 
+ 2009  bundle install
+ 2010  ls -l ~/.gem/
+ 2011  ls -l ~/.gem/ruby/
+ 2012  ls -l ~/.gem/ruby/2.3.0/
+ 2013  ls -l ~/.gem/ruby/2.3.0/gems/
+ 2014  ls -l ~/.gem/specs/
+ 2015  ls -l ~/.gem/specs/api.rubygems.org%443/
+ 2016  ls -l ~/.gem/specs/api.rubygems.org%443/quick/
+ 2017  ls -l ~/.gem/specs/api.rubygems.org%443/quick/Marshal.4.8/bundler-1.16.4.gemspec 
+ 2018  less ~/.gem/specs/api.rubygems.org%443/quick/Marshal.4.8/bundler-1.16.4.gemspec
+ 2019  bundle install --path ~/.gem/ruby/2.3.0/gems/
+ 2020  ls -l /usr/lib/ruby/2.3.0/
+ 2021  apt-get install ruby-devel
+ 2022  sudo apt-get install ruby-devel
+ 2023  bundle install --path ~/.gem/ruby/2.3.0/gems/
+ 2024  sudo apt-get install ruby-dev
+ 2025  bundle install --path ~/.gem/ruby/2.3.0/gems/
+ 2026  ls
+ 2027  vi gh-pages-install.log
+ 2028  ls history.txt 
+ 2029  less history.txt 
+ 2030  history
+ 2031  history > history-masklin.txt
