@@ -37,3 +37,9 @@ tags: [code]
 - HTML5
 	- Media Source
 - Goedel's Incompleteness Theorem and higher Algebras
+- Quantum computing
+	- IBM
+	- Google
+- Electronic payments
+	- Paypal
+	- Amazon
