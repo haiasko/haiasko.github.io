@@ -30,3 +30,22 @@ You must bundle Filter gem dependencies.
 See html-pipeline README.md for more details.
 https://github.com/jch/html-pipeline#dependencies
 
+--- and the response was:
+
+plamen@voyager:~/projects/haiasko.github.io$ git push --set-upstream origin noJB
+Username for 'https://github.com': haiasko
+Password for 'https://haiasko@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 899 bytes | 899.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'noJB' on GitHub by visiting:
+remote:      https://github.com/haiasko/haiasko.github.io/pull/new/noJB
+remote: 
+To https://github.com/haiasko/haiasko.github.io.git
+ * [new branch]      noJB -> noJB
+Branch 'noJB' set up to track remote branch 'noJB' from 'origin'.
+
