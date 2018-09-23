@@ -130,4 +130,4 @@ JB :
 
 #start switching to Kramdown
 markdown: kramdown
-theme: jekyll-theme-minimal
+theme: minima
