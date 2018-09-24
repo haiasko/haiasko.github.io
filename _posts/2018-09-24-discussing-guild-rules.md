@@ -2,7 +2,7 @@
 layout: post
 title: BAD BOYS on Forge of Empires en12 Mount Killmore
 category: scratch
-tags: [games]
+tags: [games, FoE, Forge of Empires]
 ---
 {% include JB/setup %}
 
