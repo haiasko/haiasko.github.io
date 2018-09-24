@@ -2,7 +2,7 @@
 layout: post
 title: BAD BOYS on Forge of Empires en12 Mount Killmore
 category: scratch
-tags: [games, FoE, Forge of Empires]
+tags: [games, FoE, Forge of Empires, Mount Killmore, Bad Boys guild, Wheaty]
 ---
 {% include JB/setup %}
 
