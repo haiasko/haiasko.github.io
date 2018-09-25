@@ -8,6 +8,7 @@ tags: [games, FoE, Forge of Empires, Mount Killmore, Bad Boys guild, Wheaty]
 
 ### Terracota Army prices:
 - [Ravenlark](https://foestats.com/en/en12/players/profile/?server=en12&world=Mount%20Killmore&id=5117148): i sell for 1800 fp's and allow 1:2 trades from any age. My buyers have been contributing to a combo of kraken and ao, or ao and inno and gaining back 450-600 plus arc boost in rewards. I also give a rather large discount if the person buying is offering up future or ao goods as my guilds treasury can always use the future goods and i can double up the ao to future and then donate them.
+- [Cordelia the Scourge 326](https://foestats.com/en/en12/players/profile/?server=en12&world=Mount%20Killmore&id=5106275) I usually sell the full set for 1500 FPS.
 
 ### Goods sellers (in Guild Forums too)
 There is a relatively current copy at <http://nimb.ws/nR38pz>. Here is another one:
