@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Jekyll Alternatives
-category: scratch
 comments: true
 tags: [jekyll, haskell, hakyll, emacs, orgmode]
 ---
